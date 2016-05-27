@@ -12,6 +12,7 @@ app.get('/', function (req, res) {
 }, function(error, response, body){
     res.send(error);
     res.send(body);
+    res.send(response);
 });
 });
 
