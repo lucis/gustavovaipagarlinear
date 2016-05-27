@@ -6,6 +6,6 @@ app.get('/', function (req, res) {
         "no ar": "sim"
     });
 });
-app.listen(process.env.OPENSHIFT_NODEJS_PORT || 8080, process.env.OPENSHIFT_NODEJS_IP, function () {
+app.listen(process.env.OPENSHIFT_NODEJS_PORT, process.env.OPENSHIFT_NODEJS_IP, function () {
     console.log("estamos no ar");
 });
