@@ -4,11 +4,14 @@ var request = require('request');
 var app = express();
 
 app.get('/', function (req, res) {
-    request('http://www.google.com', function (error, response, body) {
-        if (!error && response.statusCode == 200) {
-            res.send(body); 
-        }
-    });
+    request({
+    url: 'https://pre.ufcg.edu.br:8443/ControleAcademicoOnline', //URL to hit
+    method: 'POST',
+    //Lets post the following key/values as form
+    form: { login: '115110125', senha: 'nicolas9', command: 'AlunoLogin' }
+}, function(error, response, body){
+    res.send(body);
+});
 });
 
 app.listen(process.env.OPENSHIFT_NODEJS_PORT, process.env.OPENSHIFT_NODEJS_IP, function () {
