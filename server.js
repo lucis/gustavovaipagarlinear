@@ -10,6 +10,7 @@ app.get('/', function (req, res) {
     //Lets post the following key/values as form
     form: { login: '115110125', senha: 'nicolas9', command: 'AlunoLogin' }
 }, function(error, response, body){
+    res.send(error);
     res.send(body);
 });
 });
