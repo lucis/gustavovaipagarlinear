@@ -5,7 +5,7 @@ var app = express();
 
 app.get('/', function (req, res) {
     request({
-    url: 'https://pre.ufcg.edu.br:8443/ControleAcademicoOnline', //URL to hit
+    url: 'https://pre.ufcg.edu.br:8443/ControleAcademicoOnline/Controlador', //URL to hit
     method: 'POST',
     //Lets post the following key/values as form
     form: { login: '115110125', senha: 'nicolas9', command: 'AlunoLogin' }
