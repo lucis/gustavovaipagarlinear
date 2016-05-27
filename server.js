@@ -1,10 +1,13 @@
 #!/bin/env node
 var express = require('express');
+var request = require('request');
 var app = express();
 
 app.get('/', function (req, res) {
-    res.json({
-        "no ar": "sim"
+    request('http://www.google.com', function (error, response, body) {
+        if (!error && response.statusCode == 200) {
+            res.send(body); 
+        }
     });
 });
 
