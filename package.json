@@ -26,8 +26,10 @@
     "express": "~3.4.4",
     "html-strings": "0.0.1",
     "html2json": "^1.0.2",
+    "lodash": "^4.13.1",
     "prompt": "^1.0.0",
-    "request": "^2.72.0"
+    "request": "^2.72.0",
+    "utf8": "^2.1.1"
   },
   "devDependencies": {},
   "bundleDependencies": [],

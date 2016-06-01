@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Controle Acad�mico Online</title>
+<link type="text/css" href="css/estilos.css" rel="stylesheet">
+<link type="image/x-icon" href="imagens/favicon.ico" rel="shortcut icon">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/themes/smoothness/jquery-ui.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+<script type="text/javascript" src="scripts/jquery/jquery.ui.datepicker-pt-BR.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="scripts/funcoes.js"></script>
+</head>
+<body id="corpo">
+<div class="container panel panel-primary text-center" id="header" role="banner">
+<div class="row">
+<div class="col-sm-2 col-xs-3">
+<a href="./"><img src="imagens/brasao.ufcg.png" alt="Universidade Federal de Campina Grande"></a>
+</div>
+<div class="col-sm-8 col-xs-8">
+<h1><a href="./">Controle Acad�mico Online</a></h1>
+</div>
+<div class="col-sm-2 col-xs-1 hidden-xs hidden-print">
+<a href="./"><img src="imagens/livros.png" alt="Atividades Acad�micas"></a>
+</div>
+</div>
+</div>
+<!-- <div id="faixaAviso"></div> --><div class="container panel panel-primary hidden-print" id="menu" role="navigation">
+<ul class="nav nav-pills">
+<li><a href="Controlador?command=Home"><span class="glyphicon glyphicon-home"></span><span class="sr-only">P�gina Inicial</span></a></li>
+<li class="dropdown">
+<a id="alunoInfo" role="button" data-toggle="dropdown" href="#">Minhas informa��es <b class="caret"></b></a>
+<ul class="dropdown-menu" role="menu" aria-labelledby="alunoInfo">
+<li role="presentation">
+<a role="menuitem" tabindex="-1" href="Controlador?command=AlunoCadastro">Cadastro</a>
+</li>
+<li role="presentation">
+<a role="menuitem" tabindex="-1" href="Controlador?command=AlunoHistorico">Hist�rico</a>
+</li>
+<li role="presentation">
+<a role="menuitem" tabindex="-1" href="Controlador?command=AlunoCurriculo">Curr�culo</a>
+</li>
+<li role="presentation">
+<a role="menuitem" tabindex="-1" href="Controlador?command=AlunoTurmasListar">Turmas em curso</a>
+</li>
+</ul>
+</li>
+<li class="dropdown">
+<a id="alunoMatriculas" role="button" data-toggle="dropdown" href="#">Matr�culas <b class="caret"></b></a>
+<ul class="dropdown-menu" role="menu" aria-labelledby="alunoMatriculas">
+<li role="presentation">
+<a role="menuitem" tabindex="-1" href="Controlador?command=AlunoCalendarioCampus">Calend�rio do campus</a>
+</li>
+<li role="presentation">
+<a role="menuitem" tabindex="-1" href="Controlador?command=AlunoCalendarioCurso">Calend�rio do curso</a>
+</li>
+</ul>
+</li>
+<li class="dropdown">
+<a id="alunoDiversos" role="button" data-toggle="dropdown" href="#">Diversos <b class="caret"></b></a>
+<ul class="dropdown-menu" role="menu" aria-labelledby="alunoDiversos">
+<li role="presentation">
+<a role="menuitem" tabindex="-1" href="Controlador?command=AlunoEstagios">Est�gios</a>
+</li>
+<li role="presentation">
+<a role="menuitem" tabindex="-1" href="Controlador?command=AlunoTrancamento">Trancamento de disciplinas</a>
+</li>
+<li role="presentation">
+<a role="menuitem" tabindex="-1" href="Controlador?command=AlunoDesvinculoSolicitar">Solicitar desv�nculo</a>
+</li>
+</ul>
+</li>
+<li class="dropdown">
+<a id="alunoUsuario" role="button" data-toggle="dropdown" href="#">Usu�rio <b class="caret"></b></a>
+<ul class="dropdown-menu" role="menu" aria-labelledby="alunoUsuario">
+<li role="presentation">
+<a role="menuitem" tabindex="-1" href="Controlador?command=AlunoSenhaGetFormAlterar">Alterar senha</a>
+</li>
+<li role="presentation">
+<a role="menuitem" tabindex="-1" href="Controlador?command=AlunoAjuda">Ajuda</a>
+</li>
+</ul>
+</li>
+<li><a href="Controlador?command=SairDoSistema">Sair</a></li>
+</ul>
+</div>
+<div class="container panel panel-primary" id="conteudo" role="main">
+<h2>Turmas em curso <button class='btn btn-info btn-xs hidden-print' title='Exibir ajuda' id='helpIcon'><span class='glyphicon glyphicon-question-sign'></span><span class='sr-only'>Exibir ajuda</span></button><script type='text/javascript'>bindHelpTrigger('helpIcon', 'alunoTurmasListar', false);</script></h2>
+<table class="table table-striped table-hover table-condensed">
+<thead>
+<tr>
+<th class="text-center">Per�odo</th>
+<th class="text-center">C�digo</th>
+<th>Disciplina</th>
+<th class="text-center">Turma</th>
+<th class="text-center">Hor�rios</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="text-center">2015.2</td>
+<td class="text-center">1109053</td>
+<td>
+<a href="Controlador?command=AlunoTurmaNotas&amp;codigo=1109053&amp;turma=04&amp;periodo=2015.2">
+CALCULO DIFERENCIAL E INTEGRAL II</a>
+</td>
+<td class="text-center">04</td>
+<td class="text-center">
+2 14:00-16:00 (CAA304)<br>
+4 16:00-18:00 (CAA304)<br>
+</td>
+</tr>
+<tr>
+<td class="text-center">2015.2</td>
+<td class="text-center">1411181</td>
+<td>
+<a href="Controlador?command=AlunoTurmaNotas&amp;codigo=1411181&amp;turma=03&amp;periodo=2015.2">
+LABORAT�RIO DE PROGRAMA��O II</a>
+</td>
+<td class="text-center">03</td>
+<td class="text-center">
+3 08:00-10:00 (LCC1)<br>
+5 10:00-12:00 (LCC1)<br>
+</td>
+</tr>
+<tr>
+<td class="text-center">2015.2</td>
+<td class="text-center">1109113</td>
+<td>
+<a href="Controlador?command=AlunoTurmaNotas&amp;codigo=1109113&amp;turma=01&amp;periodo=2015.2">
+MATEM�TICA DISCRETA</a>
+</td>
+<td class="text-center">01</td>
+<td class="text-center">
+2 10:00-12:00 (CAA306)<br>
+5 08:00-10:00 (CAA306)<br>
+</td>
+</tr>
+<tr>
+<td class="text-center">2015.2</td>
+<td class="text-center">1411168</td>
+<td>
+<a href="Controlador?command=AlunoTurmaNotas&amp;codigo=1411168&amp;turma=02&amp;periodo=2015.2">
+PROGRAMA��O II</a>
+</td>
+<td class="text-center">02</td>
+<td class="text-center">
+4 08:00-10:00 (CAA204)<br>
+6 10:00-12:00 (CAA204)<br>
+</td>
+</tr>
+<tr>
+<td class="text-center">2015.2</td>
+<td class="text-center">1411170</td>
+<td>
+<a href="Controlador?command=AlunoTurmaNotas&amp;codigo=1411170&amp;turma=01&amp;periodo=2015.2">
+TEORIA DOS GRAFOS</a>
+</td>
+<td class="text-center">01</td>
+<td class="text-center">
+3 10:00-12:00 (CD105)<br>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="container well well-sm">
+&copy; 2016&nbsp;<a href="http://pre.ufcg.edu.br">Pr�-Reitoria de Ensino/UFCG</a><br>
+Desenvolvido por Divis�o de Inform�tica/PRE
+</div>
+<!-- INICIO ANALYTICS -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-15935598-1', 'auto');
+ga('send', 'pageview');
+</script>
+<!-- FIM ANALYTICS -->
+</body>
+</html>
