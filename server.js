@@ -142,6 +142,48 @@ var getCamposTabelaNotas = function (campos, json) {
   }
 };
 
+var getDisciplinaHistorico = function (disciplina) {
+  try{
+    var disciplinaRetorno = {};
+    
+    var str = disciplina.split(' ');
+    
+    var i = 0;
+    !isNaN(parseInt(str[i])) && str[i].length === 7? disciplinaRetorno.codigo = parseInt(str[i++]): disciplina = undefined;
+    if(_.isUndefined(disciplina)){
+      return undefined;
+    }
+    disciplinaRetorno.nome = str[i++];
+    do{
+      if(_.isEmpty(str[i])){
+        break;
+      }
+      disciplinaRetorno.nome += ' ' + str[i++];
+    }while(i < str.length);
+    
+    while(_.isEmpty(str[i++]) && i < str.length);
+    disciplinaRetorno.creditos = str[--i];
+    i += 2;
+    disciplinaRetorno.ch = str[i++];
+    
+    while(_.isEmpty(str[i++]) && i < str.length);
+    i--;
+    disciplinaRetorno.periodo = str[i] + '.' + str[i+1];
+    i += 2;
+    while(_.isEmpty(str[i++]) && i < str.length);
+    i--;
+    disciplinaRetorno.nota = str[i++];
+    disciplinaRetorno.situacao = str[i++];
+    while(!_.isEmpty(str[i]) && i < str.length){
+      disciplinaRetorno.situacao += ' ' + str[i++]; 
+    } 
+    console.log(disciplinaRetorno);
+    return disciplinaRetorno;
+  }catch(e){
+    return undefined;
+  }
+};
+
 controle.login({ login: '115110125', senha: 'nicolas9' }, function (corpo) {
   controle.get('AlunoTurmasListar', function (corpo) {
     var json = himalaya.parse(corpo);
@@ -160,51 +202,64 @@ controle.login({ login: '115110125', senha: 'nicolas9' }, function (corpo) {
     getDisciplinas(disciplinas, json);
     fs.writeFile('dump.json', JSON.stringify(json));
 
-    _.each(disciplinas, function (disciplina) {
-      controle.get(disciplina.urlNotas, function (corpo) {
-        var json = himalaya.parse(corpo);
+    controle.get('AlunoHistorico', function (corpo) {
 
-        // console.log(search("json", json, "Matrícula"));
-        // json['2']['children']['3']['children']['6']['children']['7']['children']['1']['children']['1']['children']['1']['children']['3']['children']['0']['content']
-        // console.log(search("json", json, "Nome"));
-        // json['2']['children']['3']['children']['6']['children']['7']['children']['1']['children']['1']['children']['1']['children']['5']['children']['0']['content']
-        // console.log(search("json", json, "\r\nNota 1"));
-        // json['2']['children']['3']['children']['6']['children']['7']['children']['1']['children']['1']['children']['1']['children']['7']['children']['0']['content']
-        // console.log(search("json", json, "(P = 1)"));
-        // json['2']['children']['3']['children']['6']['children']['7']['children']['1']['children']['1']['children']['1']['children']['7']['children']['3']['children']['0']['content']
-        // console.log(search("json", json, "\r\nNota 2"));
-        // json['2']['children']['3']['children']['6']['children']['7']['children']['1']['children']['1']['children']['1']['children']['9']['children']['0']['content']
-        // console.log(search("json", json, "(P = 1)"));
-        // json['2']['children']['3']['children']['6']['children']['7']['children']['1']['children']['1']['children']['1']['children']['7']['children']['3']['children']['0']['content']
-        // console.log(search("json", json, "\r\nNota 3"));
-        // json['2']['children']['3']['children']['6']['children']['7']['children']['1']['children']['1']['children']['1']['children']['11']['children']['0']['content']
-        // console.log(search("json", json, "(P = 1)"));
-        // json['2']['children']['3']['children']['6']['children']['7']['children']['1']['children']['1']['children']['1']['children']['7']['children']['3']['children']['0']['content']
+      var json = himalaya.parse(corpo);
+      var historico = [];
 
-        var campos = [];
-        getCamposTabelaNotas(campos, json);
-
-        // console.log(search("json", json, "115110125"));
-        // json['2']['children']['3']['children']['6']['children']['7']['children']['1']['children']['3']['children']['1']['children']['3']['children']['0']['content']
-        // console.log(search("json", json, "LUCIANO DE OLIVEIRA JUNIOR"));
-        // json['2']['children']['3']['children']['6']['children']['7']['children']['1']['children']['3']['children']['1']['children']['5']['children']['0']['content']
-        // console.log(search("json", json, "5.5"));
-        // json['2']['children']['3']['children']['6']['children']['7']['children']['1']['children']['3']['children']['1']['children']['7']['children']['0']['content']
-        // console.log(search("json", json, "5.7"));
-        // json['2']['children']['3']['children']['6']['children']['7']['children']['1']['children']['3']['children']['1']['children']['9']['children']['0']['content']
-        // console.log(search("json", json, "8.2"));
-        // json['2']['children']['3']['children']['6']['children']['7']['children']['1']['children']['3']['children']['1']['children']['11']['children']['0']['content']
-        // console.log(search("json", json, "6.5"));
-        // json['2']['children']['3']['children']['6']['children']['7']['children']['1']['children']['3']['children']['1']['children']['13']['children']['0']['children']['0']['content']
-        var valores = [];
-        getValoresTabelaNotas(valores, json);
-
-        disciplina.notas = [];
-        for (var i = 0; i < campos.length; i++) {
-          campos[i].value = valores[i];
-          disciplina.notas.push(campos[i]);
+      for (var i = 1; i < json['2']['children']['3']['children']['6']['children']['22']['children'].length; i += 2) {
+        if (!_.isUndefined(json['2']['children']['3']['children']['6']['children']['22']['children'][i]['children'])
+          && !_.isUndefined(json['2']['children']['3']['children']['6']['children']['22']['children'][i]['children']['0'])) {
+          var disciplinaHistorico = getDisciplinaHistorico(json['2']['children']['3']['children']['6']['children']['22']['children'][i]['children']['0']['content']);
         }
-        console.log(disciplina);
+      }
+
+      _.each(disciplinas, function (disciplina) {
+        controle.get(disciplina.urlNotas, function (corpo) {
+          var json = himalaya.parse(corpo);
+
+          // console.log(search("json", json, "Matrícula"));
+          // json['2']['children']['3']['children']['6']['children']['7']['children']['1']['children']['1']['children']['1']['children']['3']['children']['0']['content']
+          // console.log(search("json", json, "Nome"));
+          // json['2']['children']['3']['children']['6']['children']['7']['children']['1']['children']['1']['children']['1']['children']['5']['children']['0']['content']
+          // console.log(search("json", json, "\r\nNota 1"));
+          // json['2']['children']['3']['children']['6']['children']['7']['children']['1']['children']['1']['children']['1']['children']['7']['children']['0']['content']
+          // console.log(search("json", json, "(P = 1)"));
+          // json['2']['children']['3']['children']['6']['children']['7']['children']['1']['children']['1']['children']['1']['children']['7']['children']['3']['children']['0']['content']
+          // console.log(search("json", json, "\r\nNota 2"));
+          // json['2']['children']['3']['children']['6']['children']['7']['children']['1']['children']['1']['children']['1']['children']['9']['children']['0']['content']
+          // console.log(search("json", json, "(P = 1)"));
+          // json['2']['children']['3']['children']['6']['children']['7']['children']['1']['children']['1']['children']['1']['children']['7']['children']['3']['children']['0']['content']
+          // console.log(search("json", json, "\r\nNota 3"));
+          // json['2']['children']['3']['children']['6']['children']['7']['children']['1']['children']['1']['children']['1']['children']['11']['children']['0']['content']
+          // console.log(search("json", json, "(P = 1)"));
+          // json['2']['children']['3']['children']['6']['children']['7']['children']['1']['children']['1']['children']['1']['children']['7']['children']['3']['children']['0']['content']
+
+          var campos = [];
+          getCamposTabelaNotas(campos, json);
+
+          // console.log(search("json", json, "115110125"));
+          // json['2']['children']['3']['children']['6']['children']['7']['children']['1']['children']['3']['children']['1']['children']['3']['children']['0']['content']
+          // console.log(search("json", json, "LUCIANO DE OLIVEIRA JUNIOR"));
+          // json['2']['children']['3']['children']['6']['children']['7']['children']['1']['children']['3']['children']['1']['children']['5']['children']['0']['content']
+          // console.log(search("json", json, "5.5"));
+          // json['2']['children']['3']['children']['6']['children']['7']['children']['1']['children']['3']['children']['1']['children']['7']['children']['0']['content']
+          // console.log(search("json", json, "5.7"));
+          // json['2']['children']['3']['children']['6']['children']['7']['children']['1']['children']['3']['children']['1']['children']['9']['children']['0']['content']
+          // console.log(search("json", json, "8.2"));
+          // json['2']['children']['3']['children']['6']['children']['7']['children']['1']['children']['3']['children']['1']['children']['11']['children']['0']['content']
+          // console.log(search("json", json, "6.5"));
+          // json['2']['children']['3']['children']['6']['children']['7']['children']['1']['children']['3']['children']['1']['children']['13']['children']['0']['children']['0']['content']
+          var valores = [];
+          getValoresTabelaNotas(valores, json);
+
+          disciplina.notas = [];
+          for (var i = 0; i < campos.length; i++) {
+            campos[i].value = valores[i];
+            disciplina.notas.push(campos[i]);
+          }
+          console.log(disciplina);
+        });
       });
     });
   });
