@@ -69,50 +69,6 @@ var properties = [
   { name: 'senha', hidden: true }
 ];
 
-// prompt.get(properties, function (err, result) {
-//   if (err){
-//     console.log("Deu merda: "+error);
-//   }
-//   controle.login({login: result.matricula, senha: result.senha}, function (corpo) {
-//     controle.get('AlunoTurmasListar', function (corpo) {
-//       var json = himalaya.parse(corpo);
-
-
-//       function search(path, obj, target) {
-//           for (var k in obj) {
-//               if (obj.hasOwnProperty(k))
-//                   if (obj[k] === target)
-//                       return path + "['" + k + "']"
-//                   else if (typeof obj[k] === "object") {
-//                       var result = search(path + "['" + k + "']", obj[k], target);
-//                       if (result)
-//                           return result;
-//                   }
-//           }
-//           return false;
-//       }
-
-//       var path = search("json", json, "\r\nMATEM�TICA DISCRETA");
-//       // CALCULO
-//       //json['2']['children']['3']['children']['6']['children']['3']['children']['3']['children']['1']['children']['5']['children']['1']['children']['0']['content']
-//       // LP2
-//       //json['2']['children']['3']['children']['6']['children']['3']['children']['3']['children']['3']['children']['5']['children']['1']['children']['0']['content']
-//       // DISCRETA
-//       // json['2']['children']['3']['children']['6']['children']['3']['children']['3']['children']['5']['children']['5']['children']['1']['children']['0']['content']
-//       // console.log(path); //data['key1']['children']['key4']
-//       for (var i = 1; i < json['2']['children']['3']['children']['6']['children']['3']['children']['3']['children'].length; i = i + 2){
-//         // NOME
-//         // console.log(json['2']['children']['3']['children']['6']['children']['3']['children']['3']['children'][i]['children']['5']['children']['1']['children']['0']['content'])
-//         console.log(json['2']['children']['3']['children']['6']['children']['3']['children']['3']['children'][i]);
-//       }
-//       // fs.writeFile('dump.json', JSON.stringify(json));
-//     });
-
-//   });
-
-
-// });
-
 var search = function (path, obj, target) {
   for (var k in obj) {
     if (obj.hasOwnProperty(k))
@@ -160,7 +116,7 @@ var getDisciplinas = function (disciplinas, json) {
 };
 
 var getValoresTabelaNotas = function (valores, json) {
-  for (var i = 3; i < json['2']['children']['3']['children']['6']['children']['7']['children']['1']['children']['3']['children']['1']['children'].length; i += 2) {
+  for (var i = 7; i < json['2']['children']['3']['children']['6']['children']['7']['children']['1']['children']['3']['children']['1']['children'].length; i += 2) {
     try {
       var valor = json['2']['children']['3']['children']['6']['children']['7']['children']['1']['children']['3']['children']['1']['children'][i]['children']['0']['content'];
       if (_.isUndefined(valor)) {
@@ -174,10 +130,12 @@ var getValoresTabelaNotas = function (valores, json) {
 };
 
 var getCamposTabelaNotas = function (campos, json) {
-  for (var i = 3; i < json['2']['children']['3']['children']['6']['children']['7']['children']['1']['children']['1']['children']['1']['children'].length; i += 2) {
-    var campo = json['2']['children']['3']['children']['6']['children']['7']['children']['1']['children']['1']['children']['1']['children'][i]['children']['0']['content'];
+  for (var i = 7; i < json['2']['children']['3']['children']['6']['children']['7']['children']['1']['children']['1']['children']['1']['children'].length; i += 2) {
+    var campo = {};
+    campo.nome = json['2']['children']['3']['children']['6']['children']['7']['children']['1']['children']['1']['children']['1']['children'][i]['children']['0']['content'].replace('\r\n', '')
+      .replace("M.&nbsp;parc.", "Média Parcial").replace('E.&nbsp;final', "Exame Final").replace('M.&nbsp;final', "Média Final");
     if (!_.isUndefined(json['2']['children']['3']['children']['6']['children']['7']['children']['1']['children']['1']['children']['1']['children'][i]['children']['3'])) {
-      campo += ' ' + json['2']['children']['3']['children']['6']['children']['7']['children']['1']['children']['1']['children']['1']['children'][i]['children']['3']['children']['0']['content'];
+      campo.peso = json['2']['children']['3']['children']['6']['children']['7']['children']['1']['children']['1']['children']['1']['children'][i]['children']['3']['children']['0']['content'].replace('(P = ', '').replace(')', '');
     }
 
     campos.push(campo);
@@ -241,8 +199,10 @@ controle.login({ login: '115110125', senha: 'nicolas9' }, function (corpo) {
         var valores = [];
         getValoresTabelaNotas(valores, json);
 
+        disciplina.notas = [];
         for (var i = 0; i < campos.length; i++) {
-          disciplina[campos[i]] = valores[i];
+          campos[i].value = valores[i];
+          disciplina.notas.push(campos[i]);
         }
         console.log(disciplina);
       });
