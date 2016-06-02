@@ -138,12 +138,17 @@ var refinaURL = function (url) {
   return urlFinal;
 };
 
+var getURLFaltas = function (url) {
+  return url.substring(0, url.indexOf("Notas")) + "Frequencia" + url.substring(url.indexOf("&"));
+};
+
 var getDisciplinas = function (disciplinas, json) {
   for (var i = 1; i < json['2']['children']['3']['children']['6']['children']['3']['children']['3']['children'].length; i = i + 2) {
     var disciplina = {};
     disciplina.nome = json['2']['children']['3']['children']['6']['children']['3']['children']['3']['children'][i]['children']['5']['children']['1']['children']['0']['content'];
-    disciplina.url = json['2']['children']['3']['children']['6']['children']['3']['children']['3']['children'][i]['children']['5']['children']['1']['attributes']['href'].substring(20);
-    disciplina.url = refinaURL(disciplina.url);
+    disciplina.urlNotas = json['2']['children']['3']['children']['6']['children']['3']['children']['3']['children'][i]['children']['5']['children']['1']['attributes']['href'].substring(20);
+    disciplina.urlNotas = refinaURL(disciplina.urlNotas);
+    disciplina.urlFaltas = getURLFaltas(disciplina.urlNotas);
 
     disciplina.horarios = "";
     for (var j = 0; j < json['2']['children']['3']['children']['6']['children']['3']['children']['3']['children'][i]['children']['9']['children'].length; j = j + 2) {
@@ -153,6 +158,32 @@ var getDisciplinas = function (disciplinas, json) {
     disciplinas.push(disciplina);
   }
 };
+
+var getValoresTabelaNotas = function (valores, json) {
+  for (var i = 3; i < json['2']['children']['3']['children']['6']['children']['7']['children']['1']['children']['3']['children']['1']['children'].length; i += 2) {
+    try {
+      var valor = json['2']['children']['3']['children']['6']['children']['7']['children']['1']['children']['3']['children']['1']['children'][i]['children']['0']['content'];
+      if (_.isUndefined(valor)) {
+        valor = json['2']['children']['3']['children']['6']['children']['7']['children']['1']['children']['3']['children']['1']['children'][i]['children']['0']['children']['0']['content'];
+      }
+      valores.push(valor);
+    } catch (erro) {
+      valores.push('');
+    }
+  }
+};
+
+var getCamposTabelaNotas = function (campos, json) {
+  for (var i = 3; i < json['2']['children']['3']['children']['6']['children']['7']['children']['1']['children']['1']['children']['1']['children'].length; i += 2) {
+    var campo = json['2']['children']['3']['children']['6']['children']['7']['children']['1']['children']['1']['children']['1']['children'][i]['children']['0']['content'];
+    if (!_.isUndefined(json['2']['children']['3']['children']['6']['children']['7']['children']['1']['children']['1']['children']['1']['children'][i]['children']['3'])) {
+      campo += ' ' + json['2']['children']['3']['children']['6']['children']['7']['children']['1']['children']['1']['children']['1']['children'][i]['children']['3']['children']['0']['content'];
+    }
+
+    campos.push(campo);
+  }
+};
+
 controle.login({ login: '115110125', senha: 'nicolas9' }, function (corpo) {
   controle.get('AlunoTurmasListar', function (corpo) {
     var json = himalaya.parse(corpo);
@@ -172,7 +203,7 @@ controle.login({ login: '115110125', senha: 'nicolas9' }, function (corpo) {
     fs.writeFile('dump.json', JSON.stringify(json));
 
     _.each(disciplinas, function (disciplina) {
-      controle.get(disciplina.url, function (corpo) {
+      controle.get(disciplina.urlNotas, function (corpo) {
         var json = himalaya.parse(corpo);
 
         // console.log(search("json", json, "Matrícula"));
@@ -193,14 +224,7 @@ controle.login({ login: '115110125', senha: 'nicolas9' }, function (corpo) {
         // json['2']['children']['3']['children']['6']['children']['7']['children']['1']['children']['1']['children']['1']['children']['7']['children']['3']['children']['0']['content']
 
         var campos = [];
-        for (var i = 3; i < json['2']['children']['3']['children']['6']['children']['7']['children']['1']['children']['1']['children']['1']['children'].length; i += 2) {
-          var campo = json['2']['children']['3']['children']['6']['children']['7']['children']['1']['children']['1']['children']['1']['children'][i]['children']['0']['content'];
-          if (!_.isUndefined(json['2']['children']['3']['children']['6']['children']['7']['children']['1']['children']['1']['children']['1']['children'][i]['children']['3'])) {
-            campo += ' ' + json['2']['children']['3']['children']['6']['children']['7']['children']['1']['children']['1']['children']['1']['children'][i]['children']['3']['children']['0']['content'];
-          }
-
-          campos.push(campo);
-        }
+        getCamposTabelaNotas(campos, json);
 
         // console.log(search("json", json, "115110125"));
         // json['2']['children']['3']['children']['6']['children']['7']['children']['1']['children']['3']['children']['1']['children']['3']['children']['0']['content']
@@ -215,24 +239,13 @@ controle.login({ login: '115110125', senha: 'nicolas9' }, function (corpo) {
         // console.log(search("json", json, "6.5"));
         // json['2']['children']['3']['children']['6']['children']['7']['children']['1']['children']['3']['children']['1']['children']['13']['children']['0']['children']['0']['content']
         var valores = [];
+        getValoresTabelaNotas(valores, json);
 
-        for (var i = 3; i < json['2']['children']['3']['children']['6']['children']['7']['children']['1']['children']['3']['children']['1']['children'].length; i += 2) {
-          try{
-            var valor = json['2']['children']['3']['children']['6']['children']['7']['children']['1']['children']['3']['children']['1']['children'][i]['children']['0']['content'];
-            if (_.isUndefined(valor)) {
-              valor = json['2']['children']['3']['children']['6']['children']['7']['children']['1']['children']['3']['children']['1']['children'][i]['children']['0']['children']['0']['content'];
-            }
-            valores.push(valor);
-          }catch(erro){
-            valores.push('');
-          }
-        }
-
-        for(var i = 0; i < campos.length; i++){
+        for (var i = 0; i < campos.length; i++) {
           disciplina[campos[i]] = valores[i];
         }
         console.log(disciplina);
-        });
       });
     });
   });
+});
