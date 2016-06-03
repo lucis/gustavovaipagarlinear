@@ -83,6 +83,12 @@ var search = function (path, obj, target) {
   return false;
 };
 
+/**
+ * Precisa-se tratar a url de notas, portanto, esta função o faz.
+ * 
+ * @param {string} url Url a ser tratada.
+ * @returns {string} Url final.
+ */
 var refinaURL = function (url) {
   var urlFinal = "";
   for (var j = 0; j < url.length; j++) {
@@ -94,10 +100,25 @@ var refinaURL = function (url) {
   return urlFinal;
 };
 
+/**
+ * A url de notas e a url de faltas são extremamente parecidas.
+ * Portanto, dada a url de notas, esta função retorna a url de faltas.
+ * 
+ * @param {string} url Url de notas.
+ * @returns {string} Url de faltas.
+ */
 var getURLFaltas = function (url) {
   return url.substring(0, url.indexOf("Notas")) + "Frequencia" + url.substring(url.indexOf("&"));
 };
 
+/**
+ * Dado um array em que serão guardadas as disciplinas e o json da página,
+ * a função filtra o html buscando informações da disciplinas e as adiciona no
+ * array.
+ * 
+ * @param {Array} disciplinas Array para serem guardadas as disciplinas.
+ * @param {Object} json JSON do html.
+ */
 var getDisciplinas = function (disciplinas, json) {
   for (var i = 1; i < json['2']['children']['3']['children']['6']['children']['3']['children']['3']['children'].length; i = i + 2) {
     var disciplina = {};
@@ -115,6 +136,13 @@ var getDisciplinas = function (disciplinas, json) {
   }
 };
 
+/**
+ * Dado um array em que serão guardados os valores da tabela de notas e o json da página,
+ * a função filtra o html buscando tais valores e os adiciona no array.
+ * 
+ * @param {Array} valores Array para serem guardados os valores da tabela de notas.
+ * @param {Object} json JSON do html.
+ */
 var getValoresTabelaNotas = function (valores, json) {
   for (var i = 7; i < json['2']['children']['3']['children']['6']['children']['7']['children']['1']['children']['3']['children']['1']['children'].length; i += 2) {
     try {
@@ -129,6 +157,13 @@ var getValoresTabelaNotas = function (valores, json) {
   }
 };
 
+/**
+ * Dado um array em que serão guardados os campos (thead) da tabela de notas e o json da página,
+ * a função filtra o html buscando tais campos e os adiciona no array.
+ * 
+ * @param {Array} valores Array para serem guardados os campos da tabela de notas.
+ * @param {Object} json JSON do html.
+ */
 var getCamposTabelaNotas = function (campos, json) {
   for (var i = 7; i < json['2']['children']['3']['children']['6']['children']['7']['children']['1']['children']['1']['children']['1']['children'].length; i += 2) {
     var campo = {};
@@ -142,6 +177,14 @@ var getCamposTabelaNotas = function (campos, json) {
   }
 };
 
+/**
+ * Dada uma string que é a linha em que a disciplina está no histórico,
+ * a função retorna a disciplina e suas informações se for possível. Se não,
+ * retorna undefined.
+ * 
+ * @param {string} disciplina Linha do html na qual as informações vão ser filtradas.
+ * @returns {Object} Disciplina e suas informações no histórico.
+ */
 var getDisciplinaHistorico = function (disciplina) {
   try{
     var disciplinaRetorno = {};
