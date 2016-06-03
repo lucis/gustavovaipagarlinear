@@ -45,6 +45,8 @@ controle.login = function (aluno, cb) {
   var config = {
     method: 'POST',
     url: URL_CONTROLE,
+    encoding: null,
+    "Accept-Charset": "utf-8",
     form: {
       login: aluno.login,
       senha: aluno.senha,
@@ -53,6 +55,8 @@ controle.login = function (aluno, cb) {
     jar: true
   };
   request(config, function (erro, resposta, corpo) {
+    // utf-8
+    corpo = iconv.decode(new Buffer(corpo), "ISO-8859-1");
     if (erro) {
       console.log(erro);
     }
@@ -220,14 +224,28 @@ var getDisciplinaHistorico = function (disciplina) {
     while (!_.isEmpty(str[i]) && i < str.length) {
       disciplinaRetorno.situacao += ' ' + str[i++];
     }
-    console.log(disciplinaRetorno);
     return disciplinaRetorno;
   } catch (e) {
     return undefined;
   }
 };
 
-controle.login({ login: '115110125', senha: 'nicolas9' }, function (corpo) {
+controle.login({ login: '115110563', senha: 'tacio8000' }, function (corpo) {
+  
+  var user = {};
+  var json = himalaya.parse(corpo);
+  var info = json['2']['children']['3']['children']['6']['children']['3']['children']['3']['children']['0']['content'].split(' ');
+  var i = 0;
+  user.matricula = info[i++];
+  i++;
+  user.nome = info[i++];
+  do{
+    if(!_.isUndefined(info[i]))
+      user.nome += ' ' + info[i++];
+  }while(i < info.length);
+  
+  fs.writeFile('dump.json', JSON.stringify(json));
+  // json['2']['children']['3']['children']['6']['children']['3']['children']['3']['children']['0']['content']
   controle.get('AlunoTurmasListar', function (corpo) {
     var json = himalaya.parse(corpo);
 
@@ -243,6 +261,7 @@ controle.login({ login: '115110125', senha: 'nicolas9' }, function (corpo) {
 
     var disciplinas = [];
     getDisciplinas(disciplinas, json);
+    user.emCurso = disciplinas;
     fs.writeFile('dump.json', JSON.stringify(json));
 
     controle.get('AlunoHistorico', function (corpo) {
@@ -254,9 +273,13 @@ controle.login({ login: '115110125', senha: 'nicolas9' }, function (corpo) {
         if (!_.isUndefined(json['2']['children']['3']['children']['6']['children']['22']['children'][i]['children'])
           && !_.isUndefined(json['2']['children']['3']['children']['6']['children']['22']['children'][i]['children']['0'])) {
           var disciplinaHistorico = getDisciplinaHistorico(json['2']['children']['3']['children']['6']['children']['22']['children'][i]['children']['0']['content']);
+          if (!_.isUndefined(disciplinaHistorico)) {
+            historico.push(disciplinaHistorico);
+          }
         }
       }
 
+      user.historico = historico;
       _.each(disciplinas, function (disciplina) {
         controle.get(disciplina.urlNotas, function (corpo) {
           var json = himalaya.parse(corpo);
@@ -301,7 +324,7 @@ controle.login({ login: '115110125', senha: 'nicolas9' }, function (corpo) {
             campos[i].value = valores[i];
             disciplina.notas.push(campos[i]);
           }
-          console.log(disciplina);
+          console.log(user);
         });
       });
     });
