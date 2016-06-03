@@ -186,43 +186,43 @@ var getCamposTabelaNotas = function (campos, json) {
  * @returns {Object} Disciplina e suas informações no histórico.
  */
 var getDisciplinaHistorico = function (disciplina) {
-  try{
+  try {
     var disciplinaRetorno = {};
-    
+
     var str = disciplina.split(' ');
-    
+
     var i = 0;
-    !isNaN(parseInt(str[i])) && str[i].length === 7? disciplinaRetorno.codigo = parseInt(str[i++]): disciplina = undefined;
-    if(_.isUndefined(disciplina)){
+    !isNaN(parseInt(str[i])) && str[i].length === 7 ? disciplinaRetorno.codigo = parseInt(str[i++]) : disciplina = undefined;
+    if (_.isUndefined(disciplina)) {
       return undefined;
     }
     disciplinaRetorno.nome = str[i++];
-    do{
-      if(_.isEmpty(str[i])){
+    do {
+      if (_.isEmpty(str[i])) {
         break;
       }
       disciplinaRetorno.nome += ' ' + str[i++];
-    }while(i < str.length);
-    
-    while(_.isEmpty(str[i++]) && i < str.length);
+    } while (i < str.length);
+
+    while (_.isEmpty(str[i++]) && i < str.length);
     disciplinaRetorno.creditos = str[--i];
     i += 2;
     disciplinaRetorno.ch = str[i++];
-    
-    while(_.isEmpty(str[i++]) && i < str.length);
+
+    while (_.isEmpty(str[i++]) && i < str.length);
     i--;
-    disciplinaRetorno.periodo = str[i] + '.' + str[i+1];
+    disciplinaRetorno.periodo = str[i] + '.' + str[i + 1];
     i += 2;
-    while(_.isEmpty(str[i++]) && i < str.length);
+    while (_.isEmpty(str[i++]) && i < str.length);
     i--;
     disciplinaRetorno.nota = str[i++];
     disciplinaRetorno.situacao = str[i++];
-    while(!_.isEmpty(str[i]) && i < str.length){
-      disciplinaRetorno.situacao += ' ' + str[i++]; 
-    } 
+    while (!_.isEmpty(str[i]) && i < str.length) {
+      disciplinaRetorno.situacao += ' ' + str[i++];
+    }
     console.log(disciplinaRetorno);
     return disciplinaRetorno;
-  }catch(e){
+  } catch (e) {
     return undefined;
   }
 };

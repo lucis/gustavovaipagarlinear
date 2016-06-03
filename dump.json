@@ -1,1 +1,1929 @@
-[{"tagName":"!DOCTYPE","attributes":{"html":"html"},"type":"Element"},{"content":"\r\n","type":"Text"},{"tagName":"html","attributes":{},"children":[{"content":"\r\n","type":"Text"},{"tagName":"head","attributes":{},"children":[{"content":"\r\n","type":"Text"},{"tagName":"meta","attributes":{"charset":"ISO-8859-1"},"type":"Element"},{"content":"\r\n","type":"Text"},{"tagName":"meta","attributes":{"name":"viewport","content":"width=device-width, initial-scale=1.0"},"type":"Element"},{"content":"\r\n","type":"Text"},{"tagName":"title","attributes":{},"children":[{"content":"Controle Acadêmico Online","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"},{"tagName":"link","attributes":{"type":"text/css","href":"css/estilos.css","rel":"stylesheet"},"type":"Element"},{"content":"\r\n","type":"Text"},{"tagName":"link","attributes":{"type":"image/x-icon","href":"imagens/favicon.ico","rel":"shortcut icon"},"type":"Element"},{"content":"\r\n","type":"Text"},{"tagName":"link","attributes":{"rel":"stylesheet","href":"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"},"type":"Element"},{"content":"\r\n","type":"Text"},{"tagName":"link","attributes":{"rel":"stylesheet","href":"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"},"type":"Element"},{"content":"\r\n","type":"Text"},{"tagName":"link","attributes":{"rel":"stylesheet","href":"https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/themes/smoothness/jquery-ui.css"},"type":"Element"},{"content":"\r\n","type":"Text"},{"tagName":"script","attributes":{"src":"https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"},"content":"","type":"Element"},{"content":"\r\n","type":"Text"},{"tagName":"script","attributes":{"src":"https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"},"content":"","type":"Element"},{"content":"\r\n","type":"Text"},{"tagName":"script","attributes":{"type":"text/javascript","src":"scripts/jquery/jquery.ui.datepicker-pt-BR.js"},"content":"","type":"Element"},{"content":"\r\n","type":"Text"},{"tagName":"script","attributes":{"src":"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"},"content":"","type":"Element"},{"content":"\r\n","type":"Text"},{"tagName":"script","attributes":{"type":"text/javascript","src":"scripts/funcoes.js"},"content":"","type":"Element"},{"content":"\r\n","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"},{"tagName":"body","attributes":{"id":"corpo"},"children":[{"content":"\r\n","type":"Text"},{"tagName":"div","attributes":{"className":["container","panel","panel-primary","text-center"],"id":"header","role":"banner"},"children":[{"content":"\r\n","type":"Text"},{"tagName":"div","attributes":{"className":["row"]},"children":[{"content":"\r\n","type":"Text"},{"tagName":"div","attributes":{"className":["col-sm-2","col-xs-3"]},"children":[{"content":"\r\n","type":"Text"},{"tagName":"a","attributes":{"href":"./"},"children":[{"tagName":"img","attributes":{"src":"imagens/brasao.ufcg.png","alt":"Universidade Federal de Campina Grande"},"type":"Element"}],"type":"Element"},{"content":"\r\n","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"},{"tagName":"div","attributes":{"className":["col-sm-8","col-xs-8"]},"children":[{"content":"\r\n","type":"Text"},{"tagName":"h1","attributes":{},"children":[{"tagName":"a","attributes":{"href":"./"},"children":[{"content":"Controle Acadêmico Online","type":"Text"}],"type":"Element"}],"type":"Element"},{"content":"\r\n","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"},{"tagName":"div","attributes":{"className":["col-sm-2","col-xs-1","hidden-xs","hidden-print"]},"children":[{"content":"\r\n","type":"Text"},{"tagName":"a","attributes":{"href":"./"},"children":[{"tagName":"img","attributes":{"src":"imagens/livros.png","alt":"Atividades Acadêmicas"},"type":"Element"}],"type":"Element"},{"content":"\r\n","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"},{"content":" <div id=\"faixaAviso\"></div> ","type":"Comment"},{"tagName":"div","attributes":{"className":["container","panel","panel-primary","hidden-print"],"id":"menu","role":"navigation"},"children":[{"content":"\r\n","type":"Text"},{"tagName":"ul","attributes":{"className":["nav","nav-pills"]},"children":[{"content":"\r\n","type":"Text"},{"tagName":"li","attributes":{},"children":[{"tagName":"a","attributes":{"href":"Controlador?command=Home"},"children":[{"tagName":"span","attributes":{"className":["glyphicon","glyphicon-home"]},"children":[],"type":"Element"},{"tagName":"span","attributes":{"className":["sr-only"]},"children":[{"content":"Página Inicial","type":"Text"}],"type":"Element"}],"type":"Element"}],"type":"Element"},{"content":"\r\n","type":"Text"},{"tagName":"li","attributes":{"className":["dropdown"]},"children":[{"content":"\r\n","type":"Text"},{"tagName":"a","attributes":{"id":"alunoInfo","role":"button","dataset":{"toggle":"dropdown"},"href":"#"},"children":[{"content":"Minhas informações ","type":"Text"},{"tagName":"b","attributes":{"className":["caret"]},"children":[],"type":"Element"}],"type":"Element"},{"content":"\r\n","type":"Text"},{"tagName":"ul","attributes":{"className":["dropdown-menu"],"role":"menu","ariaLabelledby":"alunoInfo"},"children":[{"content":"\r\n","type":"Text"},{"tagName":"li","attributes":{"role":"presentation"},"children":[{"content":"\r\n","type":"Text"},{"tagName":"a","attributes":{"role":"menuitem","tabindex":-1,"href":"Controlador?command=AlunoCadastro"},"children":[{"content":"Cadastro","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"},{"tagName":"li","attributes":{"role":"presentation"},"children":[{"content":"\r\n","type":"Text"},{"tagName":"a","attributes":{"role":"menuitem","tabindex":-1,"href":"Controlador?command=AlunoHistorico"},"children":[{"content":"Histórico","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"},{"tagName":"li","attributes":{"role":"presentation"},"children":[{"content":"\r\n","type":"Text"},{"tagName":"a","attributes":{"role":"menuitem","tabindex":-1,"href":"Controlador?command=AlunoCurriculo"},"children":[{"content":"Currículo","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"},{"tagName":"li","attributes":{"role":"presentation"},"children":[{"content":"\r\n","type":"Text"},{"tagName":"a","attributes":{"role":"menuitem","tabindex":-1,"href":"Controlador?command=AlunoTurmasListar"},"children":[{"content":"Turmas em curso","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"},{"tagName":"li","attributes":{"className":["dropdown"]},"children":[{"content":"\r\n","type":"Text"},{"tagName":"a","attributes":{"id":"alunoMatriculas","role":"button","dataset":{"toggle":"dropdown"},"href":"#"},"children":[{"content":"Matrículas ","type":"Text"},{"tagName":"b","attributes":{"className":["caret"]},"children":[],"type":"Element"}],"type":"Element"},{"content":"\r\n","type":"Text"},{"tagName":"ul","attributes":{"className":["dropdown-menu"],"role":"menu","ariaLabelledby":"alunoMatriculas"},"children":[{"content":"\r\n","type":"Text"},{"tagName":"li","attributes":{"role":"presentation"},"children":[{"content":"\r\n","type":"Text"},{"tagName":"a","attributes":{"role":"menuitem","tabindex":-1,"href":"Controlador?command=AlunoCalendarioCampus"},"children":[{"content":"Calendário do campus","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"},{"tagName":"li","attributes":{"role":"presentation"},"children":[{"content":"\r\n","type":"Text"},{"tagName":"a","attributes":{"role":"menuitem","tabindex":-1,"href":"Controlador?command=AlunoCalendarioCurso"},"children":[{"content":"Calendário do curso","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"},{"tagName":"li","attributes":{"className":["dropdown"]},"children":[{"content":"\r\n","type":"Text"},{"tagName":"a","attributes":{"id":"alunoDiversos","role":"button","dataset":{"toggle":"dropdown"},"href":"#"},"children":[{"content":"Diversos ","type":"Text"},{"tagName":"b","attributes":{"className":["caret"]},"children":[],"type":"Element"}],"type":"Element"},{"content":"\r\n","type":"Text"},{"tagName":"ul","attributes":{"className":["dropdown-menu"],"role":"menu","ariaLabelledby":"alunoDiversos"},"children":[{"content":"\r\n","type":"Text"},{"tagName":"li","attributes":{"role":"presentation"},"children":[{"content":"\r\n","type":"Text"},{"tagName":"a","attributes":{"role":"menuitem","tabindex":-1,"href":"Controlador?command=AlunoEstagios"},"children":[{"content":"Estágios","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"},{"tagName":"li","attributes":{"role":"presentation"},"children":[{"content":"\r\n","type":"Text"},{"tagName":"a","attributes":{"role":"menuitem","tabindex":-1,"href":"Controlador?command=AlunoTrancamento"},"children":[{"content":"Trancamento de disciplinas","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"},{"tagName":"li","attributes":{"role":"presentation"},"children":[{"content":"\r\n","type":"Text"},{"tagName":"a","attributes":{"role":"menuitem","tabindex":-1,"href":"Controlador?command=AlunoDesvinculoSolicitar"},"children":[{"content":"Solicitar desvínculo","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"},{"tagName":"li","attributes":{"className":["dropdown"]},"children":[{"content":"\r\n","type":"Text"},{"tagName":"a","attributes":{"id":"alunoUsuario","role":"button","dataset":{"toggle":"dropdown"},"href":"#"},"children":[{"content":"Usuário ","type":"Text"},{"tagName":"b","attributes":{"className":["caret"]},"children":[],"type":"Element"}],"type":"Element"},{"content":"\r\n","type":"Text"},{"tagName":"ul","attributes":{"className":["dropdown-menu"],"role":"menu","ariaLabelledby":"alunoUsuario"},"children":[{"content":"\r\n","type":"Text"},{"tagName":"li","attributes":{"role":"presentation"},"children":[{"content":"\r\n","type":"Text"},{"tagName":"a","attributes":{"role":"menuitem","tabindex":-1,"href":"Controlador?command=AlunoSenhaGetFormAlterar"},"children":[{"content":"Alterar senha","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"},{"tagName":"li","attributes":{"role":"presentation"},"children":[{"content":"\r\n","type":"Text"},{"tagName":"a","attributes":{"role":"menuitem","tabindex":-1,"href":"Controlador?command=AlunoAjuda"},"children":[{"content":"Ajuda","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"},{"tagName":"li","attributes":{},"children":[{"tagName":"a","attributes":{"href":"Controlador?command=SairDoSistema"},"children":[{"content":"Sair","type":"Text"}],"type":"Element"}],"type":"Element"},{"content":"\r\n","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"},{"tagName":"div","attributes":{"className":["container","panel","panel-primary"],"id":"conteudo","role":"main"},"children":[{"content":"\r\n","type":"Text"},{"tagName":"h2","attributes":{},"children":[{"content":"Turmas em curso ","type":"Text"},{"tagName":"button","attributes":{"className":["btn","btn-info","btn-xs","hidden-print"],"title":"Exibir ajuda","id":"helpIcon"},"children":[{"tagName":"span","attributes":{"className":["glyphicon","glyphicon-question-sign"]},"children":[],"type":"Element"},{"tagName":"span","attributes":{"className":["sr-only"]},"children":[{"content":"Exibir ajuda","type":"Text"}],"type":"Element"}],"type":"Element"},{"tagName":"script","attributes":{"type":"text/javascript"},"content":"bindHelpTrigger('helpIcon', 'alunoTurmasListar', false);","type":"Element"}],"type":"Element"},{"content":"\r\n","type":"Text"},{"tagName":"table","attributes":{"className":["table","table-striped","table-hover","table-condensed"]},"children":[{"content":"\r\n","type":"Text"},{"tagName":"thead","attributes":{},"children":[{"content":"\r\n","type":"Text"},{"tagName":"tr","attributes":{},"children":[{"content":"\r\n","type":"Text"},{"tagName":"th","attributes":{"className":["text-center"]},"children":[{"content":"Período","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"},{"tagName":"th","attributes":{"className":["text-center"]},"children":[{"content":"Código","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"},{"tagName":"th","attributes":{},"children":[{"content":"Disciplina","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"},{"tagName":"th","attributes":{"className":["text-center"]},"children":[{"content":"Turma","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"},{"tagName":"th","attributes":{"className":["text-center"]},"children":[{"content":"Horários","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"},{"tagName":"tbody","attributes":{},"children":[{"content":"\r\n","type":"Text"},{"tagName":"tr","attributes":{},"children":[{"content":"\r\n","type":"Text"},{"tagName":"td","attributes":{"className":["text-center"]},"children":[{"content":"2015.2","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"},{"tagName":"td","attributes":{"className":["text-center"]},"children":[{"content":"1109053","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"},{"tagName":"td","attributes":{},"children":[{"content":"\r\n","type":"Text"},{"tagName":"a","attributes":{"href":"Controlador?command=AlunoTurmaNotas&amp;codigo=1109053&amp;turma=04&amp;periodo=2015.2"},"children":[{"content":"\r\nCALCULO DIFERENCIAL E INTEGRAL II","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"},{"tagName":"td","attributes":{"className":["text-center"]},"children":[{"content":"04","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"},{"tagName":"td","attributes":{"className":["text-center"]},"children":[{"content":"\r\n2 14:00-16:00 (CAA304)","type":"Text"},{"tagName":"br","attributes":{},"type":"Element"},{"content":"\r\n4 16:00-18:00 (CAA304)","type":"Text"},{"tagName":"br","attributes":{},"type":"Element"},{"content":"\r\n","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"},{"tagName":"tr","attributes":{},"children":[{"content":"\r\n","type":"Text"},{"tagName":"td","attributes":{"className":["text-center"]},"children":[{"content":"2015.2","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"},{"tagName":"td","attributes":{"className":["text-center"]},"children":[{"content":"1411181","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"},{"tagName":"td","attributes":{},"children":[{"content":"\r\n","type":"Text"},{"tagName":"a","attributes":{"href":"Controlador?command=AlunoTurmaNotas&amp;codigo=1411181&amp;turma=03&amp;periodo=2015.2"},"children":[{"content":"\r\nLABORATÓRIO DE PROGRAMAÇÃO II","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"},{"tagName":"td","attributes":{"className":["text-center"]},"children":[{"content":"03","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"},{"tagName":"td","attributes":{"className":["text-center"]},"children":[{"content":"\r\n3 08:00-10:00 (LCC1)","type":"Text"},{"tagName":"br","attributes":{},"type":"Element"},{"content":"\r\n5 10:00-12:00 (LCC1)","type":"Text"},{"tagName":"br","attributes":{},"type":"Element"},{"content":"\r\n","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"},{"tagName":"tr","attributes":{},"children":[{"content":"\r\n","type":"Text"},{"tagName":"td","attributes":{"className":["text-center"]},"children":[{"content":"2015.2","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"},{"tagName":"td","attributes":{"className":["text-center"]},"children":[{"content":"1109113","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"},{"tagName":"td","attributes":{},"children":[{"content":"\r\n","type":"Text"},{"tagName":"a","attributes":{"href":"Controlador?command=AlunoTurmaNotas&amp;codigo=1109113&amp;turma=01&amp;periodo=2015.2"},"children":[{"content":"\r\nMATEMÁTICA DISCRETA","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"},{"tagName":"td","attributes":{"className":["text-center"]},"children":[{"content":"01","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"},{"tagName":"td","attributes":{"className":["text-center"]},"children":[{"content":"\r\n2 10:00-12:00 (CAA306)","type":"Text"},{"tagName":"br","attributes":{},"type":"Element"},{"content":"\r\n5 08:00-10:00 (CAA306)","type":"Text"},{"tagName":"br","attributes":{},"type":"Element"},{"content":"\r\n","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"},{"tagName":"tr","attributes":{},"children":[{"content":"\r\n","type":"Text"},{"tagName":"td","attributes":{"className":["text-center"]},"children":[{"content":"2015.2","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"},{"tagName":"td","attributes":{"className":["text-center"]},"children":[{"content":"1411168","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"},{"tagName":"td","attributes":{},"children":[{"content":"\r\n","type":"Text"},{"tagName":"a","attributes":{"href":"Controlador?command=AlunoTurmaNotas&amp;codigo=1411168&amp;turma=02&amp;periodo=2015.2"},"children":[{"content":"\r\nPROGRAMAÇÃO II","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"},{"tagName":"td","attributes":{"className":["text-center"]},"children":[{"content":"02","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"},{"tagName":"td","attributes":{"className":["text-center"]},"children":[{"content":"\r\n4 08:00-10:00 (CAA204)","type":"Text"},{"tagName":"br","attributes":{},"type":"Element"},{"content":"\r\n6 10:00-12:00 (CAA204)","type":"Text"},{"tagName":"br","attributes":{},"type":"Element"},{"content":"\r\n","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"},{"tagName":"tr","attributes":{},"children":[{"content":"\r\n","type":"Text"},{"tagName":"td","attributes":{"className":["text-center"]},"children":[{"content":"2015.2","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"},{"tagName":"td","attributes":{"className":["text-center"]},"children":[{"content":"1411170","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"},{"tagName":"td","attributes":{},"children":[{"content":"\r\n","type":"Text"},{"tagName":"a","attributes":{"href":"Controlador?command=AlunoTurmaNotas&amp;codigo=1411170&amp;turma=01&amp;periodo=2015.2"},"children":[{"content":"\r\nTEORIA DOS GRAFOS","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"},{"tagName":"td","attributes":{"className":["text-center"]},"children":[{"content":"01","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"},{"tagName":"td","attributes":{"className":["text-center"]},"children":[{"content":"\r\n3 10:00-12:00 (CD105)","type":"Text"},{"tagName":"br","attributes":{},"type":"Element"},{"content":"\r\n","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"},{"tagName":"div","attributes":{"className":["container","well","well-sm"]},"children":[{"content":"\r\n&copy; 2016&nbsp;","type":"Text"},{"tagName":"a","attributes":{"href":"http://pre.ufcg.edu.br"},"children":[{"content":"Pró-Reitoria de Ensino/UFCG","type":"Text"}],"type":"Element"},{"tagName":"br","attributes":{},"type":"Element"},{"content":"\r\nDesenvolvido por Divisão de Informática/PRE\r\n","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"},{"content":" INICIO ANALYTICS ","type":"Comment"},{"content":"\r\n","type":"Text"},{"tagName":"script","attributes":{},"content":"\r\n(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){\r\n(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),\r\nm=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)\r\n})(window,document,'script','//www.google-analytics.com/analytics.js','ga');\r\nga('create', 'UA-15935598-1', 'auto');\r\nga('send', 'pageview');\r\n","type":"Element"},{"content":"\r\n","type":"Text"},{"content":" FIM ANALYTICS ","type":"Comment"},{"content":"\r\n","type":"Text"}],"type":"Element"},{"content":"\r\n","type":"Text"}],"type":"Element"}]
+[
+    {
+        "tagName": "!DOCTYPE",
+        "attributes": {
+            "html": "html"
+        },
+        "type": "Element"
+    },
+    {
+        "content": "\r\n",
+        "type": "Text"
+    },
+    {
+        "tagName": "html",
+        "attributes": {},
+        "children": [
+            {
+                "content": "\r\n",
+                "type": "Text"
+            },
+            {
+                "tagName": "head",
+                "attributes": {},
+                "children": [
+                    {
+                        "content": "\r\n",
+                        "type": "Text"
+                    },
+                    {
+                        "tagName": "meta",
+                        "attributes": {
+                            "charset": "ISO-8859-1"
+                        },
+                        "type": "Element"
+                    },
+                    {
+                        "content": "\r\n",
+                        "type": "Text"
+                    },
+                    {
+                        "tagName": "meta",
+                        "attributes": {
+                            "name": "viewport",
+                            "content": "width=device-width, initial-scale=1.0"
+                        },
+                        "type": "Element"
+                    },
+                    {
+                        "content": "\r\n",
+                        "type": "Text"
+                    },
+                    {
+                        "tagName": "title",
+                        "attributes": {},
+                        "children": [
+                            {
+                                "content": "Controle Acadêmico Online",
+                                "type": "Text"
+                            }
+                        ],
+                        "type": "Element"
+                    },
+                    {
+                        "content": "\r\n",
+                        "type": "Text"
+                    },
+                    {
+                        "tagName": "link",
+                        "attributes": {
+                            "type": "text/css",
+                            "href": "css/estilos.css",
+                            "rel": "stylesheet"
+                        },
+                        "type": "Element"
+                    },
+                    {
+                        "content": "\r\n",
+                        "type": "Text"
+                    },
+                    {
+                        "tagName": "link",
+                        "attributes": {
+                            "type": "image/x-icon",
+                            "href": "imagens/favicon.ico",
+                            "rel": "shortcut icon"
+                        },
+                        "type": "Element"
+                    },
+                    {
+                        "content": "\r\n",
+                        "type": "Text"
+                    },
+                    {
+                        "tagName": "link",
+                        "attributes": {
+                            "rel": "stylesheet",
+                            "href": "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
+                        },
+                        "type": "Element"
+                    },
+                    {
+                        "content": "\r\n",
+                        "type": "Text"
+                    },
+                    {
+                        "tagName": "link",
+                        "attributes": {
+                            "rel": "stylesheet",
+                            "href": "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"
+                        },
+                        "type": "Element"
+                    },
+                    {
+                        "content": "\r\n",
+                        "type": "Text"
+                    },
+                    {
+                        "tagName": "link",
+                        "attributes": {
+                            "rel": "stylesheet",
+                            "href": "https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/themes/smoothness/jquery-ui.css"
+                        },
+                        "type": "Element"
+                    },
+                    {
+                        "content": "\r\n",
+                        "type": "Text"
+                    },
+                    {
+                        "tagName": "script",
+                        "attributes": {
+                            "src": "https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"
+                        },
+                        "content": "",
+                        "type": "Element"
+                    },
+                    {
+                        "content": "\r\n",
+                        "type": "Text"
+                    },
+                    {
+                        "tagName": "script",
+                        "attributes": {
+                            "src": "https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"
+                        },
+                        "content": "",
+                        "type": "Element"
+                    },
+                    {
+                        "content": "\r\n",
+                        "type": "Text"
+                    },
+                    {
+                        "tagName": "script",
+                        "attributes": {
+                            "type": "text/javascript",
+                            "src": "scripts/jquery/jquery.ui.datepicker-pt-BR.js"
+                        },
+                        "content": "",
+                        "type": "Element"
+                    },
+                    {
+                        "content": "\r\n",
+                        "type": "Text"
+                    },
+                    {
+                        "tagName": "script",
+                        "attributes": {
+                            "src": "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"
+                        },
+                        "content": "",
+                        "type": "Element"
+                    },
+                    {
+                        "content": "\r\n",
+                        "type": "Text"
+                    },
+                    {
+                        "tagName": "script",
+                        "attributes": {
+                            "type": "text/javascript",
+                            "src": "scripts/funcoes.js"
+                        },
+                        "content": "",
+                        "type": "Element"
+                    },
+                    {
+                        "content": "\r\n",
+                        "type": "Text"
+                    }
+                ],
+                "type": "Element"
+            },
+            {
+                "content": "\r\n",
+                "type": "Text"
+            },
+            {
+                "tagName": "body",
+                "attributes": {
+                    "id": "corpo"
+                },
+                "children": [
+                    {
+                        "content": "\r\n",
+                        "type": "Text"
+                    },
+                    {
+                        "tagName": "div",
+                        "attributes": {
+                            "className": [
+                                "container",
+                                "panel",
+                                "panel-primary",
+                                "text-center"
+                            ],
+                            "id": "header",
+                            "role": "banner"
+                        },
+                        "children": [
+                            {
+                                "content": "\r\n",
+                                "type": "Text"
+                            },
+                            {
+                                "tagName": "div",
+                                "attributes": {
+                                    "className": [
+                                        "row"
+                                    ]
+                                },
+                                "children": [
+                                    {
+                                        "content": "\r\n",
+                                        "type": "Text"
+                                    },
+                                    {
+                                        "tagName": "div",
+                                        "attributes": {
+                                            "className": [
+                                                "col-sm-2",
+                                                "col-xs-3"
+                                            ]
+                                        },
+                                        "children": [
+                                            {
+                                                "content": "\r\n",
+                                                "type": "Text"
+                                            },
+                                            {
+                                                "tagName": "a",
+                                                "attributes": {
+                                                    "href": "./"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "tagName": "img",
+                                                        "attributes": {
+                                                            "src": "imagens/brasao.ufcg.png",
+                                                            "alt": "Universidade Federal de Campina Grande"
+                                                        },
+                                                        "type": "Element"
+                                                    }
+                                                ],
+                                                "type": "Element"
+                                            },
+                                            {
+                                                "content": "\r\n",
+                                                "type": "Text"
+                                            }
+                                        ],
+                                        "type": "Element"
+                                    },
+                                    {
+                                        "content": "\r\n",
+                                        "type": "Text"
+                                    },
+                                    {
+                                        "tagName": "div",
+                                        "attributes": {
+                                            "className": [
+                                                "col-sm-8",
+                                                "col-xs-8"
+                                            ]
+                                        },
+                                        "children": [
+                                            {
+                                                "content": "\r\n",
+                                                "type": "Text"
+                                            },
+                                            {
+                                                "tagName": "h1",
+                                                "attributes": {},
+                                                "children": [
+                                                    {
+                                                        "tagName": "a",
+                                                        "attributes": {
+                                                            "href": "./"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "content": "Controle Acadêmico Online",
+                                                                "type": "Text"
+                                                            }
+                                                        ],
+                                                        "type": "Element"
+                                                    }
+                                                ],
+                                                "type": "Element"
+                                            },
+                                            {
+                                                "content": "\r\n",
+                                                "type": "Text"
+                                            }
+                                        ],
+                                        "type": "Element"
+                                    },
+                                    {
+                                        "content": "\r\n",
+                                        "type": "Text"
+                                    },
+                                    {
+                                        "tagName": "div",
+                                        "attributes": {
+                                            "className": [
+                                                "col-sm-2",
+                                                "col-xs-1",
+                                                "hidden-xs",
+                                                "hidden-print"
+                                            ]
+                                        },
+                                        "children": [
+                                            {
+                                                "content": "\r\n",
+                                                "type": "Text"
+                                            },
+                                            {
+                                                "tagName": "a",
+                                                "attributes": {
+                                                    "href": "./"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "tagName": "img",
+                                                        "attributes": {
+                                                            "src": "imagens/livros.png",
+                                                            "alt": "Atividades Acadêmicas"
+                                                        },
+                                                        "type": "Element"
+                                                    }
+                                                ],
+                                                "type": "Element"
+                                            },
+                                            {
+                                                "content": "\r\n",
+                                                "type": "Text"
+                                            }
+                                        ],
+                                        "type": "Element"
+                                    },
+                                    {
+                                        "content": "\r\n",
+                                        "type": "Text"
+                                    }
+                                ],
+                                "type": "Element"
+                            },
+                            {
+                                "content": "\r\n",
+                                "type": "Text"
+                            }
+                        ],
+                        "type": "Element"
+                    },
+                    {
+                        "content": "\r\n",
+                        "type": "Text"
+                    },
+                    {
+                        "content": " <div id=\"faixaAviso\"></div> ",
+                        "type": "Comment"
+                    },
+                    {
+                        "tagName": "div",
+                        "attributes": {
+                            "className": [
+                                "container",
+                                "panel",
+                                "panel-primary",
+                                "hidden-print"
+                            ],
+                            "id": "menu",
+                            "role": "navigation"
+                        },
+                        "children": [
+                            {
+                                "content": "\r\n",
+                                "type": "Text"
+                            },
+                            {
+                                "tagName": "ul",
+                                "attributes": {
+                                    "className": [
+                                        "nav",
+                                        "nav-pills"
+                                    ]
+                                },
+                                "children": [
+                                    {
+                                        "content": "\r\n",
+                                        "type": "Text"
+                                    },
+                                    {
+                                        "tagName": "li",
+                                        "attributes": {},
+                                        "children": [
+                                            {
+                                                "tagName": "a",
+                                                "attributes": {
+                                                    "href": "Controlador?command=Home"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "tagName": "span",
+                                                        "attributes": {
+                                                            "className": [
+                                                                "glyphicon",
+                                                                "glyphicon-home"
+                                                            ]
+                                                        },
+                                                        "children": [],
+                                                        "type": "Element"
+                                                    },
+                                                    {
+                                                        "tagName": "span",
+                                                        "attributes": {
+                                                            "className": [
+                                                                "sr-only"
+                                                            ]
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "content": "Página Inicial",
+                                                                "type": "Text"
+                                                            }
+                                                        ],
+                                                        "type": "Element"
+                                                    }
+                                                ],
+                                                "type": "Element"
+                                            }
+                                        ],
+                                        "type": "Element"
+                                    },
+                                    {
+                                        "content": "\r\n",
+                                        "type": "Text"
+                                    },
+                                    {
+                                        "tagName": "li",
+                                        "attributes": {
+                                            "className": [
+                                                "dropdown"
+                                            ]
+                                        },
+                                        "children": [
+                                            {
+                                                "content": "\r\n",
+                                                "type": "Text"
+                                            },
+                                            {
+                                                "tagName": "a",
+                                                "attributes": {
+                                                    "id": "alunoInfo",
+                                                    "role": "button",
+                                                    "dataset": {
+                                                        "toggle": "dropdown"
+                                                    },
+                                                    "href": "#"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "content": "Minhas informações ",
+                                                        "type": "Text"
+                                                    },
+                                                    {
+                                                        "tagName": "b",
+                                                        "attributes": {
+                                                            "className": [
+                                                                "caret"
+                                                            ]
+                                                        },
+                                                        "children": [],
+                                                        "type": "Element"
+                                                    }
+                                                ],
+                                                "type": "Element"
+                                            },
+                                            {
+                                                "content": "\r\n",
+                                                "type": "Text"
+                                            },
+                                            {
+                                                "tagName": "ul",
+                                                "attributes": {
+                                                    "className": [
+                                                        "dropdown-menu"
+                                                    ],
+                                                    "role": "menu",
+                                                    "ariaLabelledby": "alunoInfo"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "content": "\r\n",
+                                                        "type": "Text"
+                                                    },
+                                                    {
+                                                        "tagName": "li",
+                                                        "attributes": {
+                                                            "role": "presentation"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "content": "\r\n",
+                                                                "type": "Text"
+                                                            },
+                                                            {
+                                                                "tagName": "a",
+                                                                "attributes": {
+                                                                    "role": "menuitem",
+                                                                    "tabindex": -1,
+                                                                    "href": "Controlador?command=AlunoCadastro"
+                                                                },
+                                                                "children": [
+                                                                    {
+                                                                        "content": "Cadastro",
+                                                                        "type": "Text"
+                                                                    }
+                                                                ],
+                                                                "type": "Element"
+                                                            },
+                                                            {
+                                                                "content": "\r\n",
+                                                                "type": "Text"
+                                                            }
+                                                        ],
+                                                        "type": "Element"
+                                                    },
+                                                    {
+                                                        "content": "\r\n",
+                                                        "type": "Text"
+                                                    },
+                                                    {
+                                                        "tagName": "li",
+                                                        "attributes": {
+                                                            "role": "presentation"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "content": "\r\n",
+                                                                "type": "Text"
+                                                            },
+                                                            {
+                                                                "tagName": "a",
+                                                                "attributes": {
+                                                                    "role": "menuitem",
+                                                                    "tabindex": -1,
+                                                                    "href": "Controlador?command=AlunoHistorico"
+                                                                },
+                                                                "children": [
+                                                                    {
+                                                                        "content": "Histórico",
+                                                                        "type": "Text"
+                                                                    }
+                                                                ],
+                                                                "type": "Element"
+                                                            },
+                                                            {
+                                                                "content": "\r\n",
+                                                                "type": "Text"
+                                                            }
+                                                        ],
+                                                        "type": "Element"
+                                                    },
+                                                    {
+                                                        "content": "\r\n",
+                                                        "type": "Text"
+                                                    },
+                                                    {
+                                                        "tagName": "li",
+                                                        "attributes": {
+                                                            "role": "presentation"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "content": "\r\n",
+                                                                "type": "Text"
+                                                            },
+                                                            {
+                                                                "tagName": "a",
+                                                                "attributes": {
+                                                                    "role": "menuitem",
+                                                                    "tabindex": -1,
+                                                                    "href": "Controlador?command=AlunoCurriculo"
+                                                                },
+                                                                "children": [
+                                                                    {
+                                                                        "content": "Currículo",
+                                                                        "type": "Text"
+                                                                    }
+                                                                ],
+                                                                "type": "Element"
+                                                            },
+                                                            {
+                                                                "content": "\r\n",
+                                                                "type": "Text"
+                                                            }
+                                                        ],
+                                                        "type": "Element"
+                                                    },
+                                                    {
+                                                        "content": "\r\n",
+                                                        "type": "Text"
+                                                    },
+                                                    {
+                                                        "tagName": "li",
+                                                        "attributes": {
+                                                            "role": "presentation"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "content": "\r\n",
+                                                                "type": "Text"
+                                                            },
+                                                            {
+                                                                "tagName": "a",
+                                                                "attributes": {
+                                                                    "role": "menuitem",
+                                                                    "tabindex": -1,
+                                                                    "href": "Controlador?command=AlunoTurmasListar"
+                                                                },
+                                                                "children": [
+                                                                    {
+                                                                        "content": "Turmas em curso",
+                                                                        "type": "Text"
+                                                                    }
+                                                                ],
+                                                                "type": "Element"
+                                                            },
+                                                            {
+                                                                "content": "\r\n",
+                                                                "type": "Text"
+                                                            }
+                                                        ],
+                                                        "type": "Element"
+                                                    },
+                                                    {
+                                                        "content": "\r\n",
+                                                        "type": "Text"
+                                                    }
+                                                ],
+                                                "type": "Element"
+                                            },
+                                            {
+                                                "content": "\r\n",
+                                                "type": "Text"
+                                            }
+                                        ],
+                                        "type": "Element"
+                                    },
+                                    {
+                                        "content": "\r\n",
+                                        "type": "Text"
+                                    },
+                                    {
+                                        "tagName": "li",
+                                        "attributes": {
+                                            "className": [
+                                                "dropdown"
+                                            ]
+                                        },
+                                        "children": [
+                                            {
+                                                "content": "\r\n",
+                                                "type": "Text"
+                                            },
+                                            {
+                                                "tagName": "a",
+                                                "attributes": {
+                                                    "id": "alunoMatriculas",
+                                                    "role": "button",
+                                                    "dataset": {
+                                                        "toggle": "dropdown"
+                                                    },
+                                                    "href": "#"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "content": "Matrículas ",
+                                                        "type": "Text"
+                                                    },
+                                                    {
+                                                        "tagName": "b",
+                                                        "attributes": {
+                                                            "className": [
+                                                                "caret"
+                                                            ]
+                                                        },
+                                                        "children": [],
+                                                        "type": "Element"
+                                                    }
+                                                ],
+                                                "type": "Element"
+                                            },
+                                            {
+                                                "content": "\r\n",
+                                                "type": "Text"
+                                            },
+                                            {
+                                                "tagName": "ul",
+                                                "attributes": {
+                                                    "className": [
+                                                        "dropdown-menu"
+                                                    ],
+                                                    "role": "menu",
+                                                    "ariaLabelledby": "alunoMatriculas"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "content": "\r\n",
+                                                        "type": "Text"
+                                                    },
+                                                    {
+                                                        "tagName": "li",
+                                                        "attributes": {
+                                                            "role": "presentation"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "content": "\r\n",
+                                                                "type": "Text"
+                                                            },
+                                                            {
+                                                                "tagName": "a",
+                                                                "attributes": {
+                                                                    "role": "menuitem",
+                                                                    "tabindex": -1,
+                                                                    "href": "Controlador?command=AlunoCalendarioCampus"
+                                                                },
+                                                                "children": [
+                                                                    {
+                                                                        "content": "Calendário do campus",
+                                                                        "type": "Text"
+                                                                    }
+                                                                ],
+                                                                "type": "Element"
+                                                            },
+                                                            {
+                                                                "content": "\r\n",
+                                                                "type": "Text"
+                                                            }
+                                                        ],
+                                                        "type": "Element"
+                                                    },
+                                                    {
+                                                        "content": "\r\n",
+                                                        "type": "Text"
+                                                    },
+                                                    {
+                                                        "tagName": "li",
+                                                        "attributes": {
+                                                            "role": "presentation"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "content": "\r\n",
+                                                                "type": "Text"
+                                                            },
+                                                            {
+                                                                "tagName": "a",
+                                                                "attributes": {
+                                                                    "role": "menuitem",
+                                                                    "tabindex": -1,
+                                                                    "href": "Controlador?command=AlunoCalendarioCurso"
+                                                                },
+                                                                "children": [
+                                                                    {
+                                                                        "content": "Calendário do curso",
+                                                                        "type": "Text"
+                                                                    }
+                                                                ],
+                                                                "type": "Element"
+                                                            },
+                                                            {
+                                                                "content": "\r\n",
+                                                                "type": "Text"
+                                                            }
+                                                        ],
+                                                        "type": "Element"
+                                                    },
+                                                    {
+                                                        "content": "\r\n",
+                                                        "type": "Text"
+                                                    }
+                                                ],
+                                                "type": "Element"
+                                            },
+                                            {
+                                                "content": "\r\n",
+                                                "type": "Text"
+                                            }
+                                        ],
+                                        "type": "Element"
+                                    },
+                                    {
+                                        "content": "\r\n",
+                                        "type": "Text"
+                                    },
+                                    {
+                                        "tagName": "li",
+                                        "attributes": {
+                                            "className": [
+                                                "dropdown"
+                                            ]
+                                        },
+                                        "children": [
+                                            {
+                                                "content": "\r\n",
+                                                "type": "Text"
+                                            },
+                                            {
+                                                "tagName": "a",
+                                                "attributes": {
+                                                    "id": "alunoDiversos",
+                                                    "role": "button",
+                                                    "dataset": {
+                                                        "toggle": "dropdown"
+                                                    },
+                                                    "href": "#"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "content": "Diversos ",
+                                                        "type": "Text"
+                                                    },
+                                                    {
+                                                        "tagName": "b",
+                                                        "attributes": {
+                                                            "className": [
+                                                                "caret"
+                                                            ]
+                                                        },
+                                                        "children": [],
+                                                        "type": "Element"
+                                                    }
+                                                ],
+                                                "type": "Element"
+                                            },
+                                            {
+                                                "content": "\r\n",
+                                                "type": "Text"
+                                            },
+                                            {
+                                                "tagName": "ul",
+                                                "attributes": {
+                                                    "className": [
+                                                        "dropdown-menu"
+                                                    ],
+                                                    "role": "menu",
+                                                    "ariaLabelledby": "alunoDiversos"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "content": "\r\n",
+                                                        "type": "Text"
+                                                    },
+                                                    {
+                                                        "tagName": "li",
+                                                        "attributes": {
+                                                            "role": "presentation"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "content": "\r\n",
+                                                                "type": "Text"
+                                                            },
+                                                            {
+                                                                "tagName": "a",
+                                                                "attributes": {
+                                                                    "role": "menuitem",
+                                                                    "tabindex": -1,
+                                                                    "href": "Controlador?command=AlunoEstagios"
+                                                                },
+                                                                "children": [
+                                                                    {
+                                                                        "content": "Estágios",
+                                                                        "type": "Text"
+                                                                    }
+                                                                ],
+                                                                "type": "Element"
+                                                            },
+                                                            {
+                                                                "content": "\r\n",
+                                                                "type": "Text"
+                                                            }
+                                                        ],
+                                                        "type": "Element"
+                                                    },
+                                                    {
+                                                        "content": "\r\n",
+                                                        "type": "Text"
+                                                    },
+                                                    {
+                                                        "tagName": "li",
+                                                        "attributes": {
+                                                            "role": "presentation"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "content": "\r\n",
+                                                                "type": "Text"
+                                                            },
+                                                            {
+                                                                "tagName": "a",
+                                                                "attributes": {
+                                                                    "role": "menuitem",
+                                                                    "tabindex": -1,
+                                                                    "href": "Controlador?command=AlunoTrancamento"
+                                                                },
+                                                                "children": [
+                                                                    {
+                                                                        "content": "Trancamento de disciplinas",
+                                                                        "type": "Text"
+                                                                    }
+                                                                ],
+                                                                "type": "Element"
+                                                            },
+                                                            {
+                                                                "content": "\r\n",
+                                                                "type": "Text"
+                                                            }
+                                                        ],
+                                                        "type": "Element"
+                                                    },
+                                                    {
+                                                        "content": "\r\n",
+                                                        "type": "Text"
+                                                    },
+                                                    {
+                                                        "tagName": "li",
+                                                        "attributes": {
+                                                            "role": "presentation"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "content": "\r\n",
+                                                                "type": "Text"
+                                                            },
+                                                            {
+                                                                "tagName": "a",
+                                                                "attributes": {
+                                                                    "role": "menuitem",
+                                                                    "tabindex": -1,
+                                                                    "href": "Controlador?command=AlunoDesvinculoSolicitar"
+                                                                },
+                                                                "children": [
+                                                                    {
+                                                                        "content": "Solicitar desvínculo",
+                                                                        "type": "Text"
+                                                                    }
+                                                                ],
+                                                                "type": "Element"
+                                                            },
+                                                            {
+                                                                "content": "\r\n",
+                                                                "type": "Text"
+                                                            }
+                                                        ],
+                                                        "type": "Element"
+                                                    },
+                                                    {
+                                                        "content": "\r\n",
+                                                        "type": "Text"
+                                                    }
+                                                ],
+                                                "type": "Element"
+                                            },
+                                            {
+                                                "content": "\r\n",
+                                                "type": "Text"
+                                            }
+                                        ],
+                                        "type": "Element"
+                                    },
+                                    {
+                                        "content": "\r\n",
+                                        "type": "Text"
+                                    },
+                                    {
+                                        "tagName": "li",
+                                        "attributes": {
+                                            "className": [
+                                                "dropdown"
+                                            ]
+                                        },
+                                        "children": [
+                                            {
+                                                "content": "\r\n",
+                                                "type": "Text"
+                                            },
+                                            {
+                                                "tagName": "a",
+                                                "attributes": {
+                                                    "id": "alunoUsuario",
+                                                    "role": "button",
+                                                    "dataset": {
+                                                        "toggle": "dropdown"
+                                                    },
+                                                    "href": "#"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "content": "Usuário ",
+                                                        "type": "Text"
+                                                    },
+                                                    {
+                                                        "tagName": "b",
+                                                        "attributes": {
+                                                            "className": [
+                                                                "caret"
+                                                            ]
+                                                        },
+                                                        "children": [],
+                                                        "type": "Element"
+                                                    }
+                                                ],
+                                                "type": "Element"
+                                            },
+                                            {
+                                                "content": "\r\n",
+                                                "type": "Text"
+                                            },
+                                            {
+                                                "tagName": "ul",
+                                                "attributes": {
+                                                    "className": [
+                                                        "dropdown-menu"
+                                                    ],
+                                                    "role": "menu",
+                                                    "ariaLabelledby": "alunoUsuario"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "content": "\r\n",
+                                                        "type": "Text"
+                                                    },
+                                                    {
+                                                        "tagName": "li",
+                                                        "attributes": {
+                                                            "role": "presentation"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "content": "\r\n",
+                                                                "type": "Text"
+                                                            },
+                                                            {
+                                                                "tagName": "a",
+                                                                "attributes": {
+                                                                    "role": "menuitem",
+                                                                    "tabindex": -1,
+                                                                    "href": "Controlador?command=AlunoSenhaGetFormAlterar"
+                                                                },
+                                                                "children": [
+                                                                    {
+                                                                        "content": "Alterar senha",
+                                                                        "type": "Text"
+                                                                    }
+                                                                ],
+                                                                "type": "Element"
+                                                            },
+                                                            {
+                                                                "content": "\r\n",
+                                                                "type": "Text"
+                                                            }
+                                                        ],
+                                                        "type": "Element"
+                                                    },
+                                                    {
+                                                        "content": "\r\n",
+                                                        "type": "Text"
+                                                    },
+                                                    {
+                                                        "tagName": "li",
+                                                        "attributes": {
+                                                            "role": "presentation"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "content": "\r\n",
+                                                                "type": "Text"
+                                                            },
+                                                            {
+                                                                "tagName": "a",
+                                                                "attributes": {
+                                                                    "role": "menuitem",
+                                                                    "tabindex": -1,
+                                                                    "href": "Controlador?command=AlunoAjuda"
+                                                                },
+                                                                "children": [
+                                                                    {
+                                                                        "content": "Ajuda",
+                                                                        "type": "Text"
+                                                                    }
+                                                                ],
+                                                                "type": "Element"
+                                                            },
+                                                            {
+                                                                "content": "\r\n",
+                                                                "type": "Text"
+                                                            }
+                                                        ],
+                                                        "type": "Element"
+                                                    },
+                                                    {
+                                                        "content": "\r\n",
+                                                        "type": "Text"
+                                                    }
+                                                ],
+                                                "type": "Element"
+                                            },
+                                            {
+                                                "content": "\r\n",
+                                                "type": "Text"
+                                            }
+                                        ],
+                                        "type": "Element"
+                                    },
+                                    {
+                                        "content": "\r\n",
+                                        "type": "Text"
+                                    },
+                                    {
+                                        "tagName": "li",
+                                        "attributes": {},
+                                        "children": [
+                                            {
+                                                "tagName": "a",
+                                                "attributes": {
+                                                    "href": "Controlador?command=SairDoSistema"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "content": "Sair",
+                                                        "type": "Text"
+                                                    }
+                                                ],
+                                                "type": "Element"
+                                            }
+                                        ],
+                                        "type": "Element"
+                                    },
+                                    {
+                                        "content": "\r\n",
+                                        "type": "Text"
+                                    }
+                                ],
+                                "type": "Element"
+                            },
+                            {
+                                "content": "\r\n",
+                                "type": "Text"
+                            }
+                        ],
+                        "type": "Element"
+                    },
+                    {
+                        "content": "\r\n",
+                        "type": "Text"
+                    },
+                    {
+                        "tagName": "div",
+                        "attributes": {
+                            "className": [
+                                "container",
+                                "panel",
+                                "panel-primary"
+                            ],
+                            "id": "conteudo",
+                            "role": "main"
+                        },
+                        "children": [
+                            {
+                                "content": "\r\n",
+                                "type": "Text"
+                            },
+                            {
+                                "tagName": "h2",
+                                "attributes": {},
+                                "children": [
+                                    {
+                                        "content": "Turmas em curso ",
+                                        "type": "Text"
+                                    },
+                                    {
+                                        "tagName": "button",
+                                        "attributes": {
+                                            "className": [
+                                                "btn",
+                                                "btn-info",
+                                                "btn-xs",
+                                                "hidden-print"
+                                            ],
+                                            "title": "Exibir ajuda",
+                                            "id": "helpIcon"
+                                        },
+                                        "children": [
+                                            {
+                                                "tagName": "span",
+                                                "attributes": {
+                                                    "className": [
+                                                        "glyphicon",
+                                                        "glyphicon-question-sign"
+                                                    ]
+                                                },
+                                                "children": [],
+                                                "type": "Element"
+                                            },
+                                            {
+                                                "tagName": "span",
+                                                "attributes": {
+                                                    "className": [
+                                                        "sr-only"
+                                                    ]
+                                                },
+                                                "children": [
+                                                    {
+                                                        "content": "Exibir ajuda",
+                                                        "type": "Text"
+                                                    }
+                                                ],
+                                                "type": "Element"
+                                            }
+                                        ],
+                                        "type": "Element"
+                                    },
+                                    {
+                                        "tagName": "script",
+                                        "attributes": {
+                                            "type": "text/javascript"
+                                        },
+                                        "content": "bindHelpTrigger('helpIcon', 'alunoTurmasListar', false);",
+                                        "type": "Element"
+                                    }
+                                ],
+                                "type": "Element"
+                            },
+                            {
+                                "content": "\r\n",
+                                "type": "Text"
+                            },
+                            {
+                                "tagName": "table",
+                                "attributes": {
+                                    "className": [
+                                        "table",
+                                        "table-striped",
+                                        "table-hover",
+                                        "table-condensed"
+                                    ]
+                                },
+                                "children": [
+                                    {
+                                        "content": "\r\n",
+                                        "type": "Text"
+                                    },
+                                    {
+                                        "tagName": "thead",
+                                        "attributes": {},
+                                        "children": [
+                                            {
+                                                "content": "\r\n",
+                                                "type": "Text"
+                                            },
+                                            {
+                                                "tagName": "tr",
+                                                "attributes": {},
+                                                "children": [
+                                                    {
+                                                        "content": "\r\n",
+                                                        "type": "Text"
+                                                    },
+                                                    {
+                                                        "tagName": "th",
+                                                        "attributes": {
+                                                            "className": [
+                                                                "text-center"
+                                                            ]
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "content": "Período",
+                                                                "type": "Text"
+                                                            }
+                                                        ],
+                                                        "type": "Element"
+                                                    },
+                                                    {
+                                                        "content": "\r\n",
+                                                        "type": "Text"
+                                                    },
+                                                    {
+                                                        "tagName": "th",
+                                                        "attributes": {
+                                                            "className": [
+                                                                "text-center"
+                                                            ]
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "content": "Código",
+                                                                "type": "Text"
+                                                            }
+                                                        ],
+                                                        "type": "Element"
+                                                    },
+                                                    {
+                                                        "content": "\r\n",
+                                                        "type": "Text"
+                                                    },
+                                                    {
+                                                        "tagName": "th",
+                                                        "attributes": {},
+                                                        "children": [
+                                                            {
+                                                                "content": "Disciplina",
+                                                                "type": "Text"
+                                                            }
+                                                        ],
+                                                        "type": "Element"
+                                                    },
+                                                    {
+                                                        "content": "\r\n",
+                                                        "type": "Text"
+                                                    },
+                                                    {
+                                                        "tagName": "th",
+                                                        "attributes": {
+                                                            "className": [
+                                                                "text-center"
+                                                            ]
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "content": "Turma",
+                                                                "type": "Text"
+                                                            }
+                                                        ],
+                                                        "type": "Element"
+                                                    },
+                                                    {
+                                                        "content": "\r\n",
+                                                        "type": "Text"
+                                                    },
+                                                    {
+                                                        "tagName": "th",
+                                                        "attributes": {
+                                                            "className": [
+                                                                "text-center"
+                                                            ]
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "content": "Horários",
+                                                                "type": "Text"
+                                                            }
+                                                        ],
+                                                        "type": "Element"
+                                                    },
+                                                    {
+                                                        "content": "\r\n",
+                                                        "type": "Text"
+                                                    }
+                                                ],
+                                                "type": "Element"
+                                            },
+                                            {
+                                                "content": "\r\n",
+                                                "type": "Text"
+                                            }
+                                        ],
+                                        "type": "Element"
+                                    },
+                                    {
+                                        "content": "\r\n",
+                                        "type": "Text"
+                                    },
+                                    {
+                                        "tagName": "tbody",
+                                        "attributes": {},
+                                        "children": [
+                                            {
+                                                "content": "\r\n",
+                                                "type": "Text"
+                                            },
+                                            {
+                                                "tagName": "tr",
+                                                "attributes": {},
+                                                "children": [
+                                                    {
+                                                        "content": "\r\n",
+                                                        "type": "Text"
+                                                    },
+                                                    {
+                                                        "tagName": "td",
+                                                        "attributes": {
+                                                            "className": [
+                                                                "text-center"
+                                                            ]
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "content": "2015.2",
+                                                                "type": "Text"
+                                                            }
+                                                        ],
+                                                        "type": "Element"
+                                                    },
+                                                    {
+                                                        "content": "\r\n",
+                                                        "type": "Text"
+                                                    },
+                                                    {
+                                                        "tagName": "td",
+                                                        "attributes": {
+                                                            "className": [
+                                                                "text-center"
+                                                            ]
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "content": "1411181",
+                                                                "type": "Text"
+                                                            }
+                                                        ],
+                                                        "type": "Element"
+                                                    },
+                                                    {
+                                                        "content": "\r\n",
+                                                        "type": "Text"
+                                                    },
+                                                    {
+                                                        "tagName": "td",
+                                                        "attributes": {},
+                                                        "children": [
+                                                            {
+                                                                "content": "\r\n",
+                                                                "type": "Text"
+                                                            },
+                                                            {
+                                                                "tagName": "a",
+                                                                "attributes": {
+                                                                    "href": "Controlador?command=AlunoTurmaNotas&amp;codigo=1411181&amp;turma=03&amp;periodo=2015.2"
+                                                                },
+                                                                "children": [
+                                                                    {
+                                                                        "content": "\r\nLABORATÓRIO DE PROGRAMAÇÃO II",
+                                                                        "type": "Text"
+                                                                    }
+                                                                ],
+                                                                "type": "Element"
+                                                            },
+                                                            {
+                                                                "content": "\r\n",
+                                                                "type": "Text"
+                                                            }
+                                                        ],
+                                                        "type": "Element"
+                                                    },
+                                                    {
+                                                        "content": "\r\n",
+                                                        "type": "Text"
+                                                    },
+                                                    {
+                                                        "tagName": "td",
+                                                        "attributes": {
+                                                            "className": [
+                                                                "text-center"
+                                                            ]
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "content": "03",
+                                                                "type": "Text"
+                                                            }
+                                                        ],
+                                                        "type": "Element"
+                                                    },
+                                                    {
+                                                        "content": "\r\n",
+                                                        "type": "Text"
+                                                    },
+                                                    {
+                                                        "tagName": "td",
+                                                        "attributes": {
+                                                            "className": [
+                                                                "text-center"
+                                                            ]
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "content": "\r\n3 08:00-10:00 (LCC1)",
+                                                                "type": "Text"
+                                                            },
+                                                            {
+                                                                "tagName": "br",
+                                                                "attributes": {},
+                                                                "type": "Element"
+                                                            },
+                                                            {
+                                                                "content": "\r\n5 10:00-12:00 (LCC1)",
+                                                                "type": "Text"
+                                                            },
+                                                            {
+                                                                "tagName": "br",
+                                                                "attributes": {},
+                                                                "type": "Element"
+                                                            },
+                                                            {
+                                                                "content": "\r\n",
+                                                                "type": "Text"
+                                                            }
+                                                        ],
+                                                        "type": "Element"
+                                                    },
+                                                    {
+                                                        "content": "\r\n",
+                                                        "type": "Text"
+                                                    }
+                                                ],
+                                                "type": "Element"
+                                            },
+                                            {
+                                                "content": "\r\n",
+                                                "type": "Text"
+                                            },
+                                            {
+                                                "tagName": "tr",
+                                                "attributes": {},
+                                                "children": [
+                                                    {
+                                                        "content": "\r\n",
+                                                        "type": "Text"
+                                                    },
+                                                    {
+                                                        "tagName": "td",
+                                                        "attributes": {
+                                                            "className": [
+                                                                "text-center"
+                                                            ]
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "content": "2015.2",
+                                                                "type": "Text"
+                                                            }
+                                                        ],
+                                                        "type": "Element"
+                                                    },
+                                                    {
+                                                        "content": "\r\n",
+                                                        "type": "Text"
+                                                    },
+                                                    {
+                                                        "tagName": "td",
+                                                        "attributes": {
+                                                            "className": [
+                                                                "text-center"
+                                                            ]
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "content": "1109113",
+                                                                "type": "Text"
+                                                            }
+                                                        ],
+                                                        "type": "Element"
+                                                    },
+                                                    {
+                                                        "content": "\r\n",
+                                                        "type": "Text"
+                                                    },
+                                                    {
+                                                        "tagName": "td",
+                                                        "attributes": {},
+                                                        "children": [
+                                                            {
+                                                                "content": "\r\n",
+                                                                "type": "Text"
+                                                            },
+                                                            {
+                                                                "tagName": "a",
+                                                                "attributes": {
+                                                                    "href": "Controlador?command=AlunoTurmaNotas&amp;codigo=1109113&amp;turma=01&amp;periodo=2015.2"
+                                                                },
+                                                                "children": [
+                                                                    {
+                                                                        "content": "\r\nMATEMÁTICA DISCRETA",
+                                                                        "type": "Text"
+                                                                    }
+                                                                ],
+                                                                "type": "Element"
+                                                            },
+                                                            {
+                                                                "content": "\r\n",
+                                                                "type": "Text"
+                                                            }
+                                                        ],
+                                                        "type": "Element"
+                                                    },
+                                                    {
+                                                        "content": "\r\n",
+                                                        "type": "Text"
+                                                    },
+                                                    {
+                                                        "tagName": "td",
+                                                        "attributes": {
+                                                            "className": [
+                                                                "text-center"
+                                                            ]
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "content": "01",
+                                                                "type": "Text"
+                                                            }
+                                                        ],
+                                                        "type": "Element"
+                                                    },
+                                                    {
+                                                        "content": "\r\n",
+                                                        "type": "Text"
+                                                    },
+                                                    {
+                                                        "tagName": "td",
+                                                        "attributes": {
+                                                            "className": [
+                                                                "text-center"
+                                                            ]
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "content": "\r\n2 10:00-12:00 (CAA306)",
+                                                                "type": "Text"
+                                                            },
+                                                            {
+                                                                "tagName": "br",
+                                                                "attributes": {},
+                                                                "type": "Element"
+                                                            },
+                                                            {
+                                                                "content": "\r\n5 08:00-10:00 (CAA306)",
+                                                                "type": "Text"
+                                                            },
+                                                            {
+                                                                "tagName": "br",
+                                                                "attributes": {},
+                                                                "type": "Element"
+                                                            },
+                                                            {
+                                                                "content": "\r\n",
+                                                                "type": "Text"
+                                                            }
+                                                        ],
+                                                        "type": "Element"
+                                                    },
+                                                    {
+                                                        "content": "\r\n",
+                                                        "type": "Text"
+                                                    }
+                                                ],
+                                                "type": "Element"
+                                            },
+                                            {
+                                                "content": "\r\n",
+                                                "type": "Text"
+                                            },
+                                            {
+                                                "tagName": "tr",
+                                                "attributes": {},
+                                                "children": [
+                                                    {
+                                                        "content": "\r\n",
+                                                        "type": "Text"
+                                                    },
+                                                    {
+                                                        "tagName": "td",
+                                                        "attributes": {
+                                                            "className": [
+                                                                "text-center"
+                                                            ]
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "content": "2015.2",
+                                                                "type": "Text"
+                                                            }
+                                                        ],
+                                                        "type": "Element"
+                                                    },
+                                                    {
+                                                        "content": "\r\n",
+                                                        "type": "Text"
+                                                    },
+                                                    {
+                                                        "tagName": "td",
+                                                        "attributes": {
+                                                            "className": [
+                                                                "text-center"
+                                                            ]
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "content": "1411168",
+                                                                "type": "Text"
+                                                            }
+                                                        ],
+                                                        "type": "Element"
+                                                    },
+                                                    {
+                                                        "content": "\r\n",
+                                                        "type": "Text"
+                                                    },
+                                                    {
+                                                        "tagName": "td",
+                                                        "attributes": {},
+                                                        "children": [
+                                                            {
+                                                                "content": "\r\n",
+                                                                "type": "Text"
+                                                            },
+                                                            {
+                                                                "tagName": "a",
+                                                                "attributes": {
+                                                                    "href": "Controlador?command=AlunoTurmaNotas&amp;codigo=1411168&amp;turma=02&amp;periodo=2015.2"
+                                                                },
+                                                                "children": [
+                                                                    {
+                                                                        "content": "\r\nPROGRAMAÇÃO II",
+                                                                        "type": "Text"
+                                                                    }
+                                                                ],
+                                                                "type": "Element"
+                                                            },
+                                                            {
+                                                                "content": "\r\n",
+                                                                "type": "Text"
+                                                            }
+                                                        ],
+                                                        "type": "Element"
+                                                    },
+                                                    {
+                                                        "content": "\r\n",
+                                                        "type": "Text"
+                                                    },
+                                                    {
+                                                        "tagName": "td",
+                                                        "attributes": {
+                                                            "className": [
+                                                                "text-center"
+                                                            ]
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "content": "02",
+                                                                "type": "Text"
+                                                            }
+                                                        ],
+                                                        "type": "Element"
+                                                    },
+                                                    {
+                                                        "content": "\r\n",
+                                                        "type": "Text"
+                                                    },
+                                                    {
+                                                        "tagName": "td",
+                                                        "attributes": {
+                                                            "className": [
+                                                                "text-center"
+                                                            ]
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "content": "\r\n4 08:00-10:00 (CAA204)",
+                                                                "type": "Text"
+                                                            },
+                                                            {
+                                                                "tagName": "br",
+                                                                "attributes": {},
+                                                                "type": "Element"
+                                                            },
+                                                            {
+                                                                "content": "\r\n6 10:00-12:00 (CAA204)",
+                                                                "type": "Text"
+                                                            },
+                                                            {
+                                                                "tagName": "br",
+                                                                "attributes": {},
+                                                                "type": "Element"
+                                                            },
+                                                            {
+                                                                "content": "\r\n",
+                                                                "type": "Text"
+                                                            }
+                                                        ],
+                                                        "type": "Element"
+                                                    },
+                                                    {
+                                                        "content": "\r\n",
+                                                        "type": "Text"
+                                                    }
+                                                ],
+                                                "type": "Element"
+                                            },
+                                            {
+                                                "content": "\r\n",
+                                                "type": "Text"
+                                            }
+                                        ],
+                                        "type": "Element"
+                                    },
+                                    {
+                                        "content": "\r\n",
+                                        "type": "Text"
+                                    }
+                                ],
+                                "type": "Element"
+                            },
+                            {
+                                "content": "\r\n",
+                                "type": "Text"
+                            }
+                        ],
+                        "type": "Element"
+                    },
+                    {
+                        "content": "\r\n",
+                        "type": "Text"
+                    },
+                    {
+                        "tagName": "div",
+                        "attributes": {
+                            "className": [
+                                "container",
+                                "well",
+                                "well-sm"
+                            ]
+                        },
+                        "children": [
+                            {
+                                "content": "\r\n&copy; 2016&nbsp;",
+                                "type": "Text"
+                            },
+                            {
+                                "tagName": "a",
+                                "attributes": {
+                                    "href": "http://pre.ufcg.edu.br"
+                                },
+                                "children": [
+                                    {
+                                        "content": "Pró-Reitoria de Ensino/UFCG",
+                                        "type": "Text"
+                                    }
+                                ],
+                                "type": "Element"
+                            },
+                            {
+                                "tagName": "br",
+                                "attributes": {},
+                                "type": "Element"
+                            },
+                            {
+                                "content": "\r\nDesenvolvido por Divisão de Informática/PRE\r\n",
+                                "type": "Text"
+                            }
+                        ],
+                        "type": "Element"
+                    },
+                    {
+                        "content": "\r\n",
+                        "type": "Text"
+                    },
+                    {
+                        "content": " INICIO ANALYTICS ",
+                        "type": "Comment"
+                    },
+                    {
+                        "content": "\r\n",
+                        "type": "Text"
+                    },
+                    {
+                        "tagName": "script",
+                        "attributes": {},
+                        "content": "\r\n(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){\r\n(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),\r\nm=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)\r\n})(window,document,'script','//www.google-analytics.com/analytics.js','ga');\r\nga('create', 'UA-15935598-1', 'auto');\r\nga('send', 'pageview');\r\n",
+                        "type": "Element"
+                    },
+                    {
+                        "content": "\r\n",
+                        "type": "Text"
+                    },
+                    {
+                        "content": " FIM ANALYTICS ",
+                        "type": "Comment"
+                    },
+                    {
+                        "content": "\r\n",
+                        "type": "Text"
+                    }
+                ],
+                "type": "Element"
+            },
+            {
+                "content": "\r\n",
+                "type": "Text"
+            }
+        ],
+        "type": "Element"
+    }
+]
