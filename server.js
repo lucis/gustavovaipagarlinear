@@ -230,7 +230,7 @@ var getDisciplinaHistorico = function (disciplina) {
   }
 };
 
-controle.login({ login: '115110563', senha: 'tacio8000' }, function (corpo) {
+controle.login({ login: '115110125', senha: 'nicolas9' }, function (corpo) {
   
   var user = {};
   var json = himalaya.parse(corpo);
